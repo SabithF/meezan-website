@@ -5,6 +5,7 @@ import NavBar from './components/Nav'
 import './App.css'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio'
+import Footer from './components/Footer'
 
 function App() {
  
@@ -12,6 +13,7 @@ function App() {
     <>
       <Hero/>
       <Portfolio/>
+      <Footer/>
     
       
     </>
