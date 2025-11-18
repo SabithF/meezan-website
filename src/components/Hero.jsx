@@ -1,40 +1,44 @@
 import React from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 
-const Hero =() =>{
-    return(
-        <>
-            {/* Hero banner */}
-            <section className="relative z-10  w-full h-[40rem] md:h-[43rem] overflow-hidden ">
-                <div className="text-white text-4xl mt-20   w-full flex  "> 
-                    
-                    
-                    <div className="flex flex-row justify-start items-start w-full h-[35rem] md:h-[43rem]">
+const Hero = () => {
+  return (
+    <section className="relative w-full h-[40rem] md:h-[48rem] overflow-hidden">
 
-                        <div className="bg-[#828D62] w-[25rem] h-[35rem] md:h-[43rem] flex justiify-between">
-                            <motion.h1
-                            initial={{opacity:0, y:40}}
-                            animate={{opacity:1, y:0}}
-                            transition={{duration:1.2, ease:"easeOut"}}
-                            className="absolute md:text-[10rem] text-8xl flex items-center 
-                            justify-start md:left-24 left-4  w-full 
-                            h-full font-cursiveFont -bottom-44 md:top-5">Leisure</motion.h1>
-                            
-                        </div>
-                        
-                        <div className="">
-                        <img src="/assets/logo/group-icon.png" alt="hero-logo" className="
-                            absolute md:h-[51rem] flex items-start md:left-[21.8rem]
-                            -left-3 justify-start invert brightness-0 opacity-50" />
+      <div className="w-full h-full flex flex-col md:flex-row">
 
-                            <img src="/assets/img/bung-02.jpg" alt="hero-img" className="object-cover h-[35rem] md:h-[43rem] overflow-hidden"/>
-                        </div>
-                    </div>
-                </div>
+        {/* LEFT GREEN AREA  */}
+        <div className="bg-[#828D62] w-full md:w-[35%] h-[10rem] md:h-full relative">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="absolute font-cursiveFont left-6 md:left-24 text-7xl md:text-[10rem] z-20 top-32 md:top-60 text-white"
+          >
+            Leisure
+          </motion.h1>
+        </div>
 
-            </section>
-        </>
-    )
-}
+        {/* RIGHT IMAGE AREA  */}
+        <div className="w-full md:w-[65%] h-[20rem] md:h-full relative">
+          <img
+            src="/assets/img/bung-02.jpg"
+            alt="hero"
+            className="w-full h-full object-cover"
+          />
+
+          {/* Transparent overlay logo */}
+          <img
+            src="/assets/logo/group-icon.png"
+            alt="overlay"
+            className="absolute -left-20 top-24 w-full h-full object-contain opacity-50 invert brightness-0"
+          />
+        </div>
+
+      </div>
+
+    </section>
+  );
+};
 
 export default Hero;
