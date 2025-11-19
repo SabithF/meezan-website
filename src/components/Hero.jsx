@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const Hero = () => {
+const Hero = ({title="Leisure", className= ""}) => {
   return (
-    <section className="relative w-full h-[40rem] md:h-[48rem] overflow-hidden">
+    <section className="relative w-full h-300rem] md:h-[48rem] overflow-hidden ">
 
       <div className="w-full h-full flex flex-col md:flex-row">
 
@@ -13,14 +13,15 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="absolute font-cursiveFont left-6 md:left-24 text-7xl md:text-[10rem] z-20 top-32 md:top-60 text-white"
+            className={`absolute font-cursiveFont left-6 md:left-24 text-8xl 
+            md:text-[10rem] z-20 top-32 md:top-60 text-white ${className}`}
           >
-            Leisure
+            {title}
           </motion.h1>
         </div>
 
         {/* RIGHT IMAGE AREA  */}
-        <div className="w-full md:w-[65%] h-[20rem] md:h-full relative">
+        <div className="w-full md:w-[65%] h-[30rem] md:h-full relative">
           <img
             src="/assets/img/bung-02.jpg"
             alt="hero"
@@ -31,7 +32,7 @@ const Hero = () => {
           <img
             src="/assets/logo/group-icon.png"
             alt="overlay"
-            className="absolute -left-20 top-24 w-full h-full object-contain opacity-50 invert brightness-0"
+            className="absolute md:right-20 -right-1 top-24 w-full h-full  object-contain opacity-50 invert brightness-0"
           />
         </div>
 

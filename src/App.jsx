@@ -6,14 +6,33 @@ import './App.css'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import About from './components/pages/aboutus/about'
+
 
 function App() {
  
   return (
     <>
       <NavBar/>
+
+    <Routes>
+      {/* Homae page  */}
+    <Route path='/' element={
+      <>
       <Hero/>
       <Portfolio/>
+      </>
+
+    } />
+
+    <Route path='/about' element={<About/>}/>
+
+
+    
+    </Routes>
+
+      
       <Footer/>
     
       
