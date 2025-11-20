@@ -72,11 +72,14 @@ const NavBar = () =>{
                 <div className="w-full flex items-center justify-between px-3 md:px-4 py-2 md:py-3">
                 
                  {/*Main logo  */} 
-                 <div className=" flex flex-row">
-                    <img src="/assets/logo/meez-logo.png" alt="meezan-logo" className="invert brightness-0 h-14 hidden md:block" />
+                 <Link to="/">
+                    <div className=" flex flex-row">
+                    <img to="/" src="/assets/logo/meez-logo.png" alt="meezan-logo" className="invert brightness-0 h-14 hidden md:block" />
                     <img src="/assets/logo/group-icon.png" alt="meezan-logo" className="invert brightness-0 h-16 block md:hidden" />
                     
                  </div>
+                 
+                 </Link>
                  <div className=" gap-10 pr-14 text-md hidden md:flex  font-outfit">
                     {NavItems.map((item, index)=> (
                         <NavLink
