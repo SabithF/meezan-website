@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
 
-        <section className="relative bg-[#101824] h-auto font-outfit py-16 md:px-28 px-10 text-white overflow-hidden ">
+        <section className="relative bg-[#101824] h-auto font-outfit  mt-3  py-16 md:px-28 px-10 text-white overflow-hidden ">
 
             <div className="flex flex-col ">
 
@@ -54,7 +54,7 @@ const Footer = () => {
 </svg></li>
                                 <li className="p-1 bg-[#373225] hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/fb.svg" alt=""  className="p-1" /></li>
                                 <li className="p-1 bg-[#373225] hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/linkedin.svg" alt=""  className=" p-1" /></li>
-                                <li className="p-1 bg-[#373225] hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/twitter.svg" alt=""  className=" p-1" /></li>
+                                <li className="p-1 bg-[#373225] font hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/twitter.svg" alt=""  className=" p-1" /></li>
                             
                             </ol>
                         </div>
