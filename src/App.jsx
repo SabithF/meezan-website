@@ -7,7 +7,7 @@ import Hero from './components/Hero'
 import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
-import About from './components/pages/aboutus/about'
+import About from './components/pages/aboutus/About'
 
 
 function App() {
