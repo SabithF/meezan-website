@@ -9,6 +9,7 @@ const NavBar = () =>{
      const location = useLocation();
      const [isScrolled, setIsScrolled] = useState(false);
      const [isNavOpen, setIsNavOpen] = useState(false);
+     const MotionLink = motion(Link);
 
 
      // Menu on route change 
@@ -66,7 +67,7 @@ const NavBar = () =>{
         return(
             <nav
             ref={navRef}
-            className={`w-full fixed top-0 z-50 transition-colors duration-300 bg-[#192638]
+            className={`w-full fixed top-0 z-[9999] transition-colors duration-300 bg-[#192638]
             ${isScrolled ? "":""}`}>
 
                 <div className="w-full flex items-center justify-between px-3 md:px-4 py-2 md:py-3">
@@ -135,7 +136,8 @@ const NavBar = () =>{
                             exit="exit">
                                 {NavItems.map((item, i)=> (
                                     <motion.div
-                                    key={i} variants={itemVarians} custom={i}
+                                    key={i}
+                                    to={item.to} variants={itemVarians} custom={i}
                                     className="text-white text-lg mb-4">
                                         {item.lable}
                                     </motion.div>
