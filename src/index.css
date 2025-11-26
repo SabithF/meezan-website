@@ -4,7 +4,18 @@
 
 @font-face {
   font-family: "cursiveFont";
-  src: url("/fonts/liana.ttf") format("truetype");
+  src: url("/fonts/liana.ttf") format("truetype"),
+       url("../public/fonts/liana.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
+/* CoHeadline Regular */
+@font-face {
+  font-family: "headlinefont";
+  src: url("/fonts/coheadline.otf") format("opentype"),
+        url("../public/fonts/coheadline.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+

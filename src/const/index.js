@@ -11,7 +11,7 @@ const heroContent = [
                         
     },
      {
-        lable: "Meezan Plantation",
+        lable: "Meezan Teas",
         desc: "Meezan Group proudly cultivates its own tea plantations in the heart of Sri Lanka, the birthplace of Ceylon tea. This direct involvement ensures the exceptional quality and distinctive character that define our premium tea offerings."
                         
     },

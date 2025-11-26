@@ -11,31 +11,34 @@ import About from './components/pages/aboutus/About'
 
 
 function App() {
- 
+
   return (
     <>
-      <NavBar/>
+      <NavBar />
 
-    <Routes>
-      {/* Homae page  */}
-    <Route path='/' element={
-      <>
-      <Hero/>
-      <Portfolio/>
-      </>
+      <Routes>
+        {/* Homae page  */}
+        <Route path='/' element={
+          <>
+            <div className="pt-[60px] md:pt-[90px]">
+              <Hero />
+            </div>
 
-    } />
+            <Portfolio />
+          </>
 
-    <Route path='/about' element={<About/>}/>
+        } />
+
+        <Route path='/about' element={<About />} />
 
 
-    
-    </Routes>
 
-      
-      <Footer/>
-    
-      
+      </Routes>
+
+
+      <Footer />
+
+
     </>
   )
 }

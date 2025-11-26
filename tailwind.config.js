@@ -17,7 +17,8 @@ export default {
         montaga: ["Montaga", "sans-serif"],
         monteCarlo: ["MonteCarlo", "sans-serif"],
         dancing: ["Dancing Script", "cursive"],
-        cursiveFont: ["cursiveFont", "cursive"]
+        cursiveFont: ["cursiveFont", "cursive"],
+        headLine: ["headlinefont", "sans-serif"],
 
       },
     },
