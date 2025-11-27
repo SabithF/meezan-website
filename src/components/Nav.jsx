@@ -65,7 +65,7 @@ const NavBar = () => {
       ref={navRef}
       className={`
         fixed top-0 left-0 w-full z-[9999] 
-        transition-all duration-300 overflow-hidden
+        transition-all duration-300 
         ${isScrolled
           ? "bg-[#192638]/70 backdrop-blur-xl shadow-lg border-b transition-all duration-300 border-white/10"
           : "bg-[#192638] backdrop-blur-0 shadow-none"
