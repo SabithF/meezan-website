@@ -1,21 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 
+/* Liana */
 @font-face {
   font-family: "cursiveFont";
-  src: url("/fonts/liana.ttf") format("truetype"),
-    url("../public/fonts/liana.ttf") format("truetype");
+  src: url("/fonts/liana.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-/* CoHeadline Regular */
+/* CoHeadline */
 @font-face {
   font-family: "headlinefont";
-  src: url("/fonts/coheadline.otf") format("opentype"),
-    url("/fonts/coheadline.woff") format("woff"),
-    url("../public/fonts/coheadline.otf") format("opentype");
+  src: url("/fonts/coheadline.woff") format("woff"),
+       url("/fonts/coheadline.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
