@@ -5,7 +5,7 @@ const Hero = ({title="Leisure", className= ""}) => {
   return (
     <section className="relative w-full overflow-hidden ">
 
-      <img src="/assets/img/hero-banner.jpg" 
+      <img src="/assets/img/main-banner.jpg" 
       alt="Meezan hero banner"
       className="w-full h-full object-cover" />
       

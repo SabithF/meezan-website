@@ -77,8 +77,8 @@ const NavBar = () => {
           flex items-center justify-between
           px-3 md:px-6 
           py-3 md:py-5 
-          transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)]
-          ${isScrolled ? "md:mx-auto md:max-w-6xl md:rounded-2xl transition-all duration-300" : ""}
+          transition-all md:mx-auto duration-500 ease-[cubic-bezier(.4,0,.2,1)]
+          ${isScrolled ? "md:max-w-6xl" : "md:max-w-full"}
         `}
       >
         {/* LOGO */}

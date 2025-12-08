@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
+import ChairmanSection from "./Chairman";
 
 const AboutBody = () => {
   return (
@@ -13,10 +14,7 @@ const AboutBody = () => {
         className="bg-[#EFE8C6] w-[90%] md:w-[75%] mr-auto mt-12 rounded-r-3xl py-16 shadow-sm"
       >
         <p className="font-messiri text-center text-lg md:text-2xl px-6 md:px-20 text-[#3b3900]">
-          Our core values shape our approach to tea production, hardware supply,
-          export activities, and our hospitality offerings. Our dedicated leadership
-          team fosters sustainable growth and ensures superior quality and enduring
-          value in all our endeavors by committing to these values.
+          Meezan Group is a diversified conglomerate with a rich heritage dating back to 1925, built on a steadfast commitment to excellence across multiple sectors. From our lush tea plantations and state-of-the-art tea factories to our trusted hardware supply operations, Meezan Group serves a broad range of industry needs. Our presence extends into exports and hospitality as well, offering charming holiday bungalows that reflect our warmth and tradition. At Meezan Group, tradition meets innovation as we continue to deliver quality, value, and integrity in every venture.
         </p>
       </motion.div>
 
@@ -74,9 +72,8 @@ const AboutBody = () => {
             Our <br /> Vision
           </h1>
 
-          <p className="md:w-[45%] mt-10 md:mt-0 text-[#4C4100] text-xl md:text-3xl font-messiri text-center md:text-right">
-            “Cultivate excellence and deliver value across our diverse portfolio,
-            empowering progress in the communities we serve.”
+          <p className="md:w-[45%] mt-10 md:mt-0 text-[#4C4100] text-xl md:text-2xl font-messiri text-center md:text-right">
+            “At Meezan Group, our vision is simple yet powerful: to place the well-being of our people at the heart of everything we do. Beyond ensuring a safe and supportive workplace, we strive to foster a vibrant community where physical, mental, and social well-being can thrive. Our dedication extends not only to the excellence of our enterprises but to the remarkable individuals whose passion, integrity, and hard work define the true strength of Meezan Group.”
           </p>
         </motion.div>
       </div>
@@ -84,7 +81,7 @@ const AboutBody = () => {
 
 
       {/* MISSION SECTION */}
-      <div className="relative w-full pt-20 pb-32">
+      <div className="relative w-full pt-20 pb-32 ">
         
         {/* Background Shape */}
         <div className="absolute right-0 top-0 w-[70%] h-[380px] bg-[#DBE0D5] rounded-l-[150px] -z-10"></div>
@@ -99,9 +96,8 @@ const AboutBody = () => {
             Our <br /> Mission
           </h1>
 
-          <p className="md:w-[45%] mt-10 md:mt-0 text-[#4C4100] text-xl md:text-3xl font-messiri text-center md:text-left">
-            “Be a dynamic and respected Sri Lankan conglomerate, renowned for our
-            commitment to quality, innovation, and sustainable development.”
+          <p className="md:w-[45%] mt-10 md:mt-0 text-[#4C4100] text-xl md:text-2xl font-messiri text-center md:text-left">
+            “Our mission is to deliver high-quality, authentically crafted products while honouring a heritage built over generations. We strive to uphold the excellence of Sri Lankan industry, secure fair value for our partners, and uplift the communities whose dedication powers our success. With integrity, innovation, and responsible growth, we work to preserve our legacy while creating sustainable opportunities for the future.”
           </p>
         </motion.div>
       </div>
@@ -109,7 +105,9 @@ const AboutBody = () => {
 
 
       {/* CHAIRMAN SECTION */}
-      <div className="w-full flex justify-center mt-20 pb-40">
+
+      <ChairmanSection/>
+      {/* <div className="w-full flex justify-center mt-20 pb-40">
         <div className="bg-[#D5DAE0] rounded-[3rem] w-[90%] md:w-[80%] py-16 px-6 md:px-20 flex flex-col items-center">
 
           <img
@@ -132,7 +130,7 @@ const AboutBody = () => {
             See more..
           </button>
         </div>
-      </div>
+      </div> */}
 
     </section>
   );
