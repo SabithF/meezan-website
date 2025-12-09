@@ -8,6 +8,7 @@ import Portfolio from './components/Portfolio'
 import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import About from './components/pages/aboutus/About'
+import TeaShopsPage from './components/pages/business/TeaShop'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         } />
 
         <Route path='/about' element={<About />} />
+        <Route path='/tea' element={<TeaShopsPage />} />
 
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import ChairmanSection from "./Chairman";
+import OurHistory from "./OurHistory.jsx";
 
 const AboutBody = () => {
   return (
@@ -107,6 +108,8 @@ const AboutBody = () => {
       {/* CHAIRMAN SECTION */}
 
       <ChairmanSection/>
+
+      <OurHistory/>
       {/* <div className="w-full flex justify-center mt-20 pb-40">
         <div className="bg-[#D5DAE0] rounded-[3rem] w-[90%] md:w-[80%] py-16 px-6 md:px-20 flex flex-col items-center">
 
