@@ -35,9 +35,8 @@ const NavBar = () => {
 
   const NavItems = [
     { lable: "About us", to: "/about" },
-    { lable: "Investors", to: "/investors" },
-    { lable: "News", to: "/news" },
-    { lable: "FAQs", to: "/faqs" },
+    { lable: "Business", to: "/tea" },
+    { lable: "CSR", to: "/news" },
     { lable: "Contact", to: "/contact" },
   ];
 
