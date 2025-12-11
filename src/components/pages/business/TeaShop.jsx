@@ -36,9 +36,9 @@ const TeaShopsPage = () => {
           alt="Tea Plantation"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
 
-        <div className="relative h-full w-full flex flex-col items-center justify-center text-white pt-10 px-4">
+        {/* <div className="relative h-full w-full flex flex-col items-center justify-center text-white pt-10 px-4">
 
           <motion.h1
             variants={fadeUp}
@@ -60,7 +60,7 @@ const TeaShopsPage = () => {
             nestled across stunning plantation landscapes.
           </motion.p>
 
-        </div>
+        </div> */}
       </section>
 
       {/* ===================== INTRO SECTION ===================== */}
@@ -76,7 +76,7 @@ const TeaShopsPage = () => {
             className="space-y-5"
           >
             <motion.h2 variants={fadeChild} className="text-3xl md:text-4xl font-messiri text-slate-900">
-              Taste the Tradition
+              Meezan Hatale Classic Tea Shop
             </motion.h2>
 
             <motion.p variants={fadeChild} className="text-slate-600 leading-relaxed">
@@ -110,7 +110,7 @@ const TeaShopsPage = () => {
       </section>
 
       {/* ===================== SECOND SECTION ===================== */}
-      <section className="max-w-6xl mx-auto py-20 px-4">
+      <section className="max-w-6xl mx-auto pb-20 px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Image */}
@@ -131,7 +131,7 @@ const TeaShopsPage = () => {
             className="space-y-5"
           >
             <motion.h2 variants={fadeChild} className="text-3xl md:text-4xl font-messiri text-slate-900">
-              A Refreshing Escape
+            
             </motion.h2>
 
             <motion.p variants={fadeChild} className="text-slate-600 leading-relaxed">

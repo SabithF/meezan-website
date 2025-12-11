@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import About from './components/pages/aboutus/About'
 import TeaShopsPage from './components/pages/business/TeaShop'
+import ChairmanMessagePage from './components/pages/chairman/ChairmanMessagePage'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 
         <Route path='/about' element={<About />} />
         <Route path='/tea' element={<TeaShopsPage />} />
+        <Route path='/chairman-message' element={<ChairmanMessagePage/>}/>
 
 
 
