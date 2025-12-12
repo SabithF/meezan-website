@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from "motion/react";
 const Hero = () => {
   const images = [
     "/assets/img/banner/main-banner.jpg",
-    "/assets/img/banner/hero-banner.jpg",
-    "/assets/img/banner/tea-factory-banner.jpg",
+    "/assets/img/banner/leisure-banner.jpg",
+    "/assets/img/banner/plantation-banner.jpg",
     "/assets/img/banner/hardware-banner.jpg",
+    "/assets/img/banner/teas-banner.jpg",
+    "/assets/img/banner/teaShop-banner.jpg",
   ];
 
   const [current, setCurrent] = useState(0);

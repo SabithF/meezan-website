@@ -205,7 +205,7 @@ const ChairmanMessagePage = () => {
                     )}
 
                     {/* ================= TAB 2 — MEEZAN FAMILY ================= */}
-                    {/* ================= TAB: MEEZAN FAMILY ================= */}
+
                     {activeTab === "family" && (
                         <section className="space-y-10">
 
@@ -246,42 +246,60 @@ const ChairmanMessagePage = () => {
                                 viewport={{ once: true, amount: 0.3 }}
                                 className="text-slate-700 leading-relaxed max-w-3xl"
                             >
-                                At the heart of the Meezan Group is a close-knit family built on dedication, sincerity, and a shared passion for the tea industry. Ihithisham Meezan and Ziaudeen Meezan, have spent nearly four decades working closely with the land, the people, and the craft of planting. 
+                                At the heart of the Meezan Group is a close-knit family built on dedication, sincerity, and a shared passion for the tea industry. Ihithisham Meezan and Ziaudeen Meezan, have spent nearly four decades working closely with the land, the people, and the craft of planting.
                             </motion.p>
 
                             {/* ========== FAMILY LEADER BLOCK ========== */}
+                            {/* ========== FAMILY LEADER BLOCK (BIG IMAGE + TEXT BELOW) ========== */}
                             <motion.div
                                 variants={fadeChild}
                                 initial="hidden"
                                 whileInView="show"
                                 viewport={{ once: true, amount: 0.3 }}
-                                className="grid md:grid-cols-[260px,1fr] gap-8 items-center max-w-4xl mx-auto"
+                                className="max-w-4xl mx-auto space-y-6"
                             >
-                                {/* Leader image */}
+
+                                {/* BIG IMAGE */}
                                 <div className="overflow-hidden rounded-3xl shadow-lg">
                                     <img
-                                        src="/assets/img/family/1.jpg"   // image of the family member / chairman
+                                        src="/assets/img/family/1.jpg"
                                         alt="Ziaudeen Meezan"
-                                        className="w-full h-[260px] md:h-[400px] object-cover transition-transform duration-700 hover:scale-105"
+                                        className="w-full h-[420px] md:h-[520px] object-cover transition-transform duration-700 hover:scale-105"
                                     />
                                 </div>
 
-                                {/* Name + message */}
+                                {/* TEXT SECTION */}
                                 <div className="space-y-3">
-                                    <h3 className="font-messiri text-xl md:text-2xl text-slate-900">
+                                    <h3 className="font-messiri text-2xl md:text-3xl text-slate-900">
                                         Ziaudeen Meezan
                                     </h3>
-                                    <p className="text-xs uppercase tracking-[0.18em] text-[#7E7440]">
-                                        Director · Plantation & Operations
-                                    </p>
-                                    <p className="text-slate-700 leading-relaxed text-[15px] md:text-[16px]">
-                                        Their leadership is shaped by humility, hard work, and a deep respect for every individual who contributes to our journey. With their experience and grounded values, they continue to guide and inspire us every day.
-Supporting them is our General Manager, Mr. M.A.M Akbar, whose extensive experience in the tea trade has been a true blessing to us. Having served in some of Sri Lanka’s finest plantations, his calm leadership, practical insight, and steady presence help ensure that our operations run smoothly and efficiently.
-We are deeply grateful for our most important strength-our staff. From the factory floors to the tea fields, our dedicated and well-trained team brings heart, pride, and commitment to their work. Their daily contributions, often carried out quietly and with genuine passion, ensure that our teas are crafted with care and that our operations remain consistent and reliable.
 
+                                    <p className="text-xs uppercase tracking-[0.18em] text-[#7E7440]">
+                                        Director
+                                    </p>
+
+                                    <p className="text-slate-700 leading-relaxed text-[15px] md:text-[16px]">
+                                        Their leadership is shaped by humility, hard work, and a deep respect for
+                                        every individual who contributes to our journey. With their experience and
+                                        grounded values, they continue to guide and inspire us every day.
+                                        <br /><br />
+                                        Supporting them is our General Manager, Mr. M.A.M Akbar, whose extensive
+                                        experience in the tea trade has been a true blessing to us. Having served
+                                        in some of Sri Lanka’s finest plantations, his calm leadership, practical
+                                        insight, and steady presence help ensure that our operations run smoothly
+                                        and efficiently.
+                                        <br /><br />
+                                        We are deeply grateful for our most important strength — our staff.
+                                        From the factory floors to the tea fields, our dedicated and well-trained
+                                        team brings heart, pride, and commitment to their work. Their daily
+                                        contributions, often carried out quietly and with genuine passion, ensure
+                                        that our teas are crafted with care and that our operations remain
+                                        consistent and reliable.
                                     </p>
                                 </div>
+
                             </motion.div>
+
 
                             {/* ========== NEW CHAPTER SECTION ========== */}
                             <motion.div
@@ -311,7 +329,7 @@ We are deeply grateful for our most important strength-our staff. From the facto
                                 {/* Message */}
                                 <p className="text-slate-700 leading-relaxed max-w-3xl">
                                     As we look ahead, we are thankful to see the next generation step into the fold. Shafraz Meezan and Ijaz Meezan, together with a growing team of young, energetic professionals, are preparing to lead the Meezan Group into its next chapter. Their fresh perspectives, enthusiasm, and respect for the values handed down to them give us great confidence for the future.
-Together, this is the Meezan Family- a group of people working with sincerity to produce black tea of the highest quality, taste, and value, while staying true to our principles and serving our stakeholders, both locally and globally with pride, humility, and gratitude.
+                                    Together, this is the Meezan Family- a group of people working with sincerity to produce black tea of the highest quality, taste, and value, while staying true to our principles and serving our stakeholders, both locally and globally with pride, humility, and gratitude.
 
                                 </p>
                             </motion.div>

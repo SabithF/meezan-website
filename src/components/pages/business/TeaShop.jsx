@@ -32,7 +32,7 @@ const TeaShopsPage = () => {
       {/* ===================== HERO SECTION ===================== */}
       <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
         <img
-          src="/assets/img/banner/tea-factory-banner.jpg"
+          src="/assets/img/banner/teaShop-banner.jpg"
           alt="Tea Plantation"
           className="absolute inset-0 w-full h-full object-cover"
         />

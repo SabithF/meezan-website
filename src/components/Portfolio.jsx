@@ -64,7 +64,7 @@ const Portfolio = () => {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     ></video>
                 </motion.div>
             </div>
@@ -167,7 +167,7 @@ const Portfolio = () => {
                     className="order-2 md:order-none w-full h-full bg-white"
                 >
                     <video
-                        src="/assets/vdo/mz-teas-clip.mp4"
+                        src="/assets/vdo/plantation-vdo.mp4"
                         autoPlay
                         loop
                         muted

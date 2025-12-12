@@ -55,45 +55,7 @@ const AboutBody = () => {
 
 
 
-
-      {/* ====================== 3-IMAGE SHOWCASE ====================== */}
-      <section className="relative w-full mt-28 flex justify-center px-4">
-
-        {/* Background Accent */}
-        <div className="absolute right-0 inset-y-0 w-[70%] bg-[#E6E6D9] rounded-l-[120px] -z-10"></div>
-
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-
-          className="relative flex flex-col md:flex-row items-center gap-10 z-10"
-        >
-          <motion.img
-            variants={child}
-            src="/assets/img/Plantation.jpg"
-            className="w-60 md:w-72 h-80 md:h-96 rounded-3xl object-cover shadow-lg"
-          />
-
-          <motion.img
-            variants={child}
-            src="/assets/img/img-4.jpg"
-            className="w-60 md:w-72 h-80 md:h-96 rounded-3xl object-cover shadow-lg md:mt-16"
-          />
-
-          <motion.img
-            variants={child}
-            src="/assets/img/inst.jpg"
-            className="w-60 md:w-72 h-80 md:h-96 rounded-3xl object-cover shadow-lg"
-          />
-        </motion.div>
-      </section>
-
-
-
-
       {/* ===================== VISION + MISSION SECTION ===================== */}
-
 
       {/* MOBILE VERSION */}
       <section className="py-16">
@@ -166,7 +128,8 @@ const AboutBody = () => {
       md:group-hover:h-40 lg:group-hover:h-30  
       group-hover:opacity-100 opacity-0 transition-all duration-500 h-0
     ">
-              To be a globally recognized brand that inspires trust and admiration by delivering authentic, high-quality experiences nurturing communities, advancing industry standards, and carrying forward a legacy of excellence for generations to come
+              To be a globally recognized brand that inspires trust and admiration by delivering authentic, high-quality experiences nurturing communities,
+              advancing industry standards, and carrying forward a legacy of excellence for generations to come
             </p>
           </div>
 
@@ -211,48 +174,43 @@ const AboutBody = () => {
 
       {/* ====================== MEEZAN LEGACY SECTION ====================== */}
 
-      <section className="max-w-6xl mx-auto py-20 px-4">
-        {/* ====================== MEEZAN LEGACY SECTION ====================== */}
+      <section className="max-w-6xl mx-auto pt-10 pb-20 px-4">
+
         <section className="max-w-6xl mx-auto py-20 px-4 space-y-16">
 
-          {/* ========== ROW 1: TEXT + IMAGE ========== */}
+          {/* ========== MAIN BIG IMAGE ========== */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="grid lg:grid-cols-2 gap-12 items-center"
           >
-            {/* Text */}
-            <div className="space-y-6">
-              {/* Heading with line */}
-              <div className="inline-flex flex-col gap-2">
-                <h2 className="text-3xl md:text-4xl font-messiri text-[#3F4F2A]">
-                  Since <span className="text-[#1E2715]">1925</span>
-                </h2>
-                <div className="h-[2px] w-20 bg-[#3F4F2A] rounded-full" />
-              </div>
+            <img
+              src="/assets/img/1925/1925-main.jpg"
+              alt="Meezan founding history"
+              className="w-full h-[350px] md:h-[600px] object-cover"
+            />
+          </motion.div>
 
-              <p className="text-slate-700 font-outfit leading-relaxed text-[17px] text-justify">
-                The Meezan Group was founded in 1925 by the late Mr. S.M. Mohideen,
-                affectionately known as “Meezan Hajiar.” A visionary entrepreneur of
-                exceptional character, he was widely respected as the driving force and
-                guiding spirit behind the business. His journey into the tea industry
-                began in 1946 with the acquisition of the Ancoombra Tea Factory and its
-                plantations—an iconic region where Mr. Henry Steven first introduced tea
-                to Ceylon in 1864. Notably, Mr. Steven was the cousin of James Taylor,
-                celebrated today as the Father of Ceylon Tea.
-              </p>
-            </div>
 
-            {/* Image 1 */}
-            <div className="overflow-hidden rounded-3xl shadow-xl">
-              <img
-                src="/assets/img/1925/1925-main.jpg"
-                alt="Meezan founding history"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
+          {/* ========== PARAGRAPH BELOW IMAGE ========== */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="space-y-6"
+          >
+            <p className="text-slate-700 font-outfit leading-relaxed text-[17px] text-justify">
+              The Meezan Group was founded in 1925 by the late Mr. S.M. Mohideen,
+              affectionately known as “Meezan Hajiar.” A visionary entrepreneur of
+              exceptional character, he was widely respected as the driving force and
+              guiding spirit behind the business. His journey into the tea industry
+              began in 1946 with the acquisition of the Ancoombra Tea Factory and its
+              plantations—an iconic region where Mr. Henry Steven first introduced tea
+              to Ceylon in 1864. Notably, Mr. Steven was the cousin of James Taylor,
+              celebrated today as the Father of Ceylon Tea.
+            </p>
           </motion.div>
 
           {/* ========== ROW 2: IMAGE + TEXT ========== */}
@@ -297,8 +255,10 @@ const AboutBody = () => {
         </section>
 
 
+
+
         {/* ====================== HISTORICAL PHOTO ARCHIVE ====================== */}
-        {/* ====================== HISTORICAL GALLERY (Perfect Fit) ====================== */}
+
         <section className="max-w-6xl mx-auto px-6 md:px-12 py-20">
           <h2 className="text-center font-messiri text-3xl md:text-4xl text-[#3F4F2A] mb-10">
             A Glimpse Into Our History
