@@ -10,6 +10,7 @@ import { Route, Routes } from 'react-router-dom'
 import About from './components/pages/aboutus/About'
 import TeaShopsPage from './components/pages/business/TeaShop'
 import ChairmanMessagePage from './components/pages/chairman/ChairmanMessagePage'
+import TeaFactoriesPage from './components/pages/business/TeaFactory'
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
 
         <Route path='/about' element={<About />} />
         <Route path='/tea' element={<TeaShopsPage />} />
+        
+        <Route path='/tea-factory' element={<TeaFactoriesPage />} />
+
         <Route path='/chairman-message' element={<ChairmanMessagePage/>}/>
 
 
