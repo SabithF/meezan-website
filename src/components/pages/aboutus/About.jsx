@@ -8,7 +8,7 @@ const About = () => {
     <section className="w-full min-h-screen">
 
       <div className="relative w-full pt-[60px] md:pt-[90px] h-[70vh] overflow-hidden ">
-        <img src="/assets/img/banner/hero-banner.jpg" alt="Meezan hero banner" 
+        <img src="/assets/img/banner/about-banner.jpg" alt="Meezan hero banner" 
         className="w-full h-full object-cover" />
 
         <div className="absolute inset-0 bg-black/40"></div>
