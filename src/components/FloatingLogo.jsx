@@ -9,7 +9,7 @@ const FloatingLogo = () => {
         fixed bottom-4 right-4 z-[9999]
         w-14 h-14 md:w-20 md:h-20
         rounded-full
-        bg-black/90 backdrop-blur
+        bg-white/90 backdrop-blur
         shadow-xl
         flex items-center justify-center
         hover:scale-105 active:scale-95

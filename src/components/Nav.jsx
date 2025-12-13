@@ -8,8 +8,6 @@ const NavBar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
-
-  // Mobile dropdown state (only one open at a time)
   const [openDropdown, setOpenDropdown] = useState(null);
 
   // Detect scroll for floating navbar
@@ -19,10 +17,10 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll to top on route change
   useEffect(() => {
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-}, [location.pathname]);
-
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [location.pathname]);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -56,16 +54,19 @@ const NavBar = () => {
       lable: "Business",
       to: "/tea",
       children: [
-        { lable: "Bangalows", to: "/tea" },
+        { lable: "Bangalow", to: "https://www.meezanbungalows.com/" }, 
         { lable: "Tea Factories", to: "/tea-factory" },
-        { lable: "Plantation", to: "/hardware" },
+        { lable: "Meezan Teas", to: "/teas" },
+        { lable: "Plantation", to: "/plantations" }, 
         { lable: "Hatale Classic Tea Shop", to: "/tea" },
-        { lable: "Hardware", to: "/education" },
+        { lable: "Hardware", to: "/hardware" }, 
       ],
     },
     { lable: "CSR", to: "/news" },
     { lable: "Contact", to: "/contact" },
   ];
+
+  const isExternal = (url) => /^https?:\/\//i.test(url);
 
   // Mobile Slide Menu Animation
   const menuVariants = {
@@ -115,21 +116,16 @@ const NavBar = () => {
         {/* LOGO */}
         <Link to="/">
           <div className="flex flex-row items-center transition-all duration-300">
-            {/* LEFT ICON */}
             <img
               src="/assets/logo/group-icon.png"
               alt="meezan-logo"
               className="invert brightness-0 h-14 hidden md:block pr-5"
             />
-
-            {/* MAIN LOGO */}
             <img
               src="/assets/logo/Meezanlogo.png"
               alt="meezan-logo"
               className="h-12 opacity-70 hidden md:block"
             />
-
-            {/* MOBILE ICON */}
             <img
               src="/assets/logo/group-icon.png"
               alt="meezan-logo"
@@ -143,6 +139,7 @@ const NavBar = () => {
           {NavItems.map((item, index) => {
             const hasChildren = Array.isArray(item.children);
 
+            // Normal top-level links
             if (!hasChildren) {
               return (
                 <NavLink
@@ -158,15 +155,12 @@ const NavBar = () => {
               );
             }
 
+            // Dropdown parents (IMPORTANT: not NavLink -> prevents double highlight)
             return (
               <div key={index} className="relative group">
-                {/* Parent */}
-                <NavLink
+                <Link
                   to={item.to}
-                  className={({ isActive }) =>
-                    `text-white hover:text-gray-300 transition inline-flex items-center gap-2
-                    ${isActive ? "font-bold underline underline-offset-8" : ""}`
-                  }
+                  className="text-white hover:text-gray-300 transition inline-flex items-center gap-2"
                 >
                   {item.lable}
                   <svg
@@ -184,12 +178,12 @@ const NavBar = () => {
                       d="M6 9l6 6 6-6"
                     />
                   </svg>
-                </NavLink>
+                </Link>
 
                 {/* Dropdown */}
                 <div
                   className="
-                    absolute left-0 top-full mt-3 w-56
+                    absolute left-0 top-full mt-3 w-60
                     rounded-2xl bg-[#192638]/95 backdrop-blur-xl
                     border border-white/10 shadow-xl
                     opacity-0 invisible translate-y-2
@@ -198,18 +192,37 @@ const NavBar = () => {
                   "
                 >
                   <div className="p-2">
-                    {item.children.map((child) => (
-                      <NavLink
-                        key={child.to}
-                        to={child.to}
-                        className={({ isActive }) =>
-                          `block rounded-xl px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition
-                          ${isActive ? "bg-white/10" : ""}`
-                        }
-                      >
-                        {child.lable}
-                      </NavLink>
-                    ))}
+                    {item.children.map((child) => {
+                      // External link opens new tab
+                      if (isExternal(child.to)) {
+                        return (
+                          <a
+                            key={child.to}
+                            href={child.to}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block rounded-xl px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition"
+                          >
+                            {child.lable}
+                          </a>
+                        );
+                      }
+
+                      // Internal link highlights correctly
+                      return (
+                        <NavLink
+                          key={child.to}
+                          to={child.to}
+                          end
+                          className={({ isActive }) =>
+                            `block rounded-xl px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition
+                             ${isActive ? "bg-white/10" : ""}`
+                          }
+                        >
+                          {child.lable}
+                        </NavLink>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -243,7 +256,7 @@ const NavBar = () => {
         {isNavOpen && (
           <motion.div
             id="mobile-menu"
-            className="fixed rounded-2xl top-16 z-10 right-3 shadow-xl w-60 bg-[#192638] p-4 border border-white/10"
+            className="fixed rounded-2xl top-16 z-10 right-3 shadow-xl w-64 bg-[#192638] p-4 border border-white/10"
             variants={menuVariants}
             initial="hidden"
             animate="visible"
@@ -263,17 +276,20 @@ const NavBar = () => {
                       custom={i}
                       className="text-white"
                     >
-                      <Link
+                      <NavLink
                         to={item.to}
-                        className="block rounded-xl px-3 py-2.5 text-[15px] hover:bg-white/10 transition"
+                        className={({ isActive }) =>
+                          `block rounded-xl px-3 py-2.5 text-[15px] hover:bg-white/10 transition
+                           ${isActive ? "bg-white/10" : ""}`
+                        }
                       >
                         {item.lable}
-                      </Link>
+                      </NavLink>
                     </motion.div>
                   );
                 }
 
-                // Dropdown item (with children)
+                // Dropdown (tap to open)
                 return (
                   <motion.div
                     key={item.lable}
@@ -322,15 +338,35 @@ const NavBar = () => {
                           className="overflow-hidden"
                         >
                           <div className="mt-2 rounded-xl bg-white/5 p-2 border border-white/10">
-                            {item.children.map((child) => (
-                              <Link
-                                key={child.to}
-                                to={child.to}
-                                className="block rounded-lg px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition"
-                              >
-                                {child.lable}
-                              </Link>
-                            ))}
+                            {item.children.map((child) => {
+                              if (isExternal(child.to)) {
+                                return (
+                                  <a
+                                    key={child.to}
+                                    href={child.to}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block rounded-lg px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition"
+                                  >
+                                    {child.lable}
+                                  </a>
+                                );
+                              }
+
+                              return (
+                                <NavLink
+                                  key={child.to}
+                                  to={child.to}
+                                  end
+                                  className={({ isActive }) =>
+                                    `block rounded-lg px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition
+                                     ${isActive ? "bg-white/10" : ""}`
+                                  }
+                                >
+                                  {child.lable}
+                                </NavLink>
+                              );
+                            })}
                           </div>
                         </motion.div>
                       )}

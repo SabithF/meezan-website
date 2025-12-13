@@ -1,78 +1,164 @@
-import { section } from "motion/react-client";
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
 
-    return (
+  return (
+    <footer className="bg-[#1f2f46] text-white font-outfit">
+      {/* TOP */}
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+          {/* LEFT LOGO */}
+          <div className="md:col-span-4">
+            <img
+              src="/assets/logo/meez-logo.png"
+              alt="Meezan Group"
+              className="w-56 md:w-64 object-contain"
+            />
+          </div>
 
-        <section className="relative bg-[#1f2f46] h-auto font-outfit    py-16 md:px-28 px-10 text-white overflow-hidden ">
+          {/* LINKS 1 */}
+          <div className="md:col-span-2">
+            <ul className="space-y-4 text-white/80">
+              <li>
+                <Link to="/about" className="hover:text-white transition">
+                  About
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.meezanbungalows.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition"
+                >
+                  Bungalows
+                </a>
+              </li>
+              <li>
+                <Link to="/tea-factory" className="hover:text-white transition">
+                  Facilities
+                </Link>
+              </li>
+              <li>
+                <Link to="/tea" className="hover:text-white transition">
+                  Booking
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div className="flex flex-col ">
+          {/* LINKS 2 */}
+          <div className="md:col-span-3">
+            <ul className="space-y-4 text-white/80">
+              <li>
+                <Link to="/terms" className="hover:text-white transition">
+                  Terms &amp; Conditions
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="hover:text-white transition">
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-                <div className="flex md:flex-row flex-col justify-between ">
+          {/* CONTACT + SOCIAL */}
+          <div className="md:col-span-3 md:text-right">
+            <div className="space-y-4 text-white/80">
+              <a
+                href="tel:+94768304310"
+                className="block hover:text-white transition"
+              >
+                +94 76 830 4310
+              </a>
 
-                    <div className="flex flex-col">
-                        <div className="w-52 pb-8">
-                            <img src="/assets/logo/meez-logo.png" alt="" />
-                        </div>
-                        
-                        <div className="flex   flex-row md:gap-64 gap-12">
-                            <div className="">
-                                <h2 className="pb-5 font-bold">Company</h2>
-                                <ol className="space-y-1 text-gray-400">
-                                    <li className="hover:text-white cursor-pointer ">History</li>
-                                    <li className="hover:text-white cursor-pointer ">Our presense</li>
-                                    <li className="hover:text-white cursor-pointer ">About us</li>
-                                </ol>
-                            </div>
-                            <div className="">
-                                <h2 className="pb-5 font-bold">Services</h2>
-                                <ol className="space-y-1 text-gray-400">
-                                    <li className="hover:text-white cursor-pointer ">History</li>
-                                    <li className="hover:text-white cursor-pointer ">Our presense</li>
-                                    <li className="hover:text-white cursor-pointer ">About us</li>
-                                </ol>
-                            </div>
-                        </div>
+              <a
+                href="mailto:meezanbungalow@sltnet.lk"
+                className="block hover:text-white transition break-all"
+              >
+                meezanbungalow@sltnet.lk
+              </a>
 
-                    </div>
-                    <div className="tracking-widest mt-5 md:mt-0 text-sm font-montserrat text-[#d8d5d0] md:mr-10">
-                        <div className="bg-[#636259] rounded-lg px-9 py-9">
-                            <h2>0775555555</h2>
-                            <p className="font-bold">Address</p>
-                            <p>Address</p>
-                        </div>
-                        <div className="flex flex-row">
-                            <ol className="flex flex-row pt-5 space-x-2">
+              {/* Social icons */}
+              {/* <div className="flex md:justify-end gap-4 pt-2">
+                
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="text-white/80 hover:text-white transition"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.1V12h2.1V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.4 2.9h-1.8v7A10 10 0 0 0 22 12z" />
+                  </svg>
+                </a>
 
-                                <li className="bg-[#636259] hover:bg-white  p-1 rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" 
-                                x="0px" y="0px" 
-                                width="25" height="25" viewBox="0 0 24 24">
-    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
-</svg></li>
-                                <li className="p-1 bg-[#636259] hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/fb.svg" alt=""  className="p-1" /></li>
-                                <li className="p-1 bg-[#636259] hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/linkedin.svg" alt=""  className=" p-1" /></li>
-                                <li className="p-1 bg-[#636259] font hover:bg-white rounded-full h-[2rem] w-[2rem]"><img src="/assets/logo/twitter.svg" alt=""  className=" p-1" /></li>
-                            
-                            </ol>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div className="pt-24 tracking-wider text-gray-600">
-                    <h2>Meezan Group LTD </h2>
-                   
-                    
-                    
-                </div>
+               
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="text-white/80 hover:text-white transition"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M17.5 6.5h.01"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </a>
+              </div> */}
             </div>
 
-        </section>
+            {/* Optional developer logo (like your screenshot) */}
+            <div className="mt-8 flex md:justify-end">
+              <img
+                src="/assets/logo/hai-logo-2.png"
+                alt="Hai Creations"
+                className="w-12 h-12 object-contain opacity-90"
+              />
+            </div>
 
-    )
-}
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="bg-black/35 border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-5 flex flex-col md:flex-row items-center justify-center gap-2 text-xs text-white/70">
+          <span>© {year} Meezan Group. All rights reserved.</span>
+          <span className="hidden md:inline">•</span>
+          <span>
+            Website developed by{" "}
+            <a
+              href="#"
+              className="text-white hover:underline underline-offset-4"
+            >
+              Hai Creations
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

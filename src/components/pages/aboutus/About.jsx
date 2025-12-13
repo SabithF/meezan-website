@@ -11,13 +11,14 @@ const About = () => {
         <img src="/assets/img/banner/about-banner.jpg" alt="Meezan hero banner" 
         className="w-full h-full object-cover" />
 
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* <div className="absolute inset-0 bg-black/40"></div> */}
 
-        <div className="uppercase pt-[60px] md:pt-[90px] absolute inset-0 flex items-center justify-center">
+        {/* <div className="uppercase pt-[60px] md:pt-[90px] absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-5xl md:text-6xl font-messiri">About us</h1>
-        </div>
+        </div> */}
         
       </div>
+      
 
       <AboutBody />
 

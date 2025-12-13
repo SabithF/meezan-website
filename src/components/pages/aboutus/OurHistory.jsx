@@ -4,31 +4,94 @@ import { motion } from "motion/react";
 const historyData = [
   {
     year: "1925",
-    title: "Humble Beginnings",
+    title: "The First Shop & Beginning of Meezan",
     description:
-      "Our journey begins in 1925 with a small family-led venture rooted in the hills of Sri Lanka, cultivating a deep respect for the land and the people who worked it.",
-    image: "/assets/img/history-1925.jpg",
+      "At the age of 12–14, he began selling betel leaves in Matale, marking the start of his entrepreneurial journey. Later, Meezan Hajiar took over his uncle’s produce shop, where he received a weighing scale called 'Meezān.'in Arabic. This inspired the name Meezan, officially launching the business legacy that continues to this day.",
+    image: "/assets/img/history/14.jpg",
   },
   {
-    year: "1974",
-    title: "Formation of Meezan Group",
+    year: "1930's",
+    title: "Expansion into Agricultural Trading",
     description:
-      "In 1974, the Meezan Group of Companies was formally established, bringing together our early tea, agriculture, and trading operations under one vision.",
-    image: "/assets/img/history-1974.jpg",
+      "Meezan Hajiar emerged as a leading trader in pepper, cocoa, coffee, cloves, spices and rubber. Known for his fairness, precise weighing, and unwavering integrity, he became one of Matale’s most trusted merchants.",
+    image: "/assets/img/history/15.jpg",
   },
   {
-    year: "1990s",
-    title: "Diversification & Expansion",
+    year: "1935",
+    title: "Diversification & Community Leadership",
     description:
-      "Through the 1990s, the Group expanded into hardware, exports, and supporting services, strengthening our reputation as a reliable, quality-driven partner.",
-    image: "/assets/img/history-1990s.jpg",
+      "The business expands through strategic trading networks across the Central Province. This decade also strengthens relationships with estate owners, enabling future plantation acquisitions",
+    image: "/assets/img/history/13.jpg",
   },
   {
-    year: "Today",
-    title: "A Diversified Conglomerate",
+    year: "1938",
+    title: "Entry into Plantations",
     description:
-      "Meezan Group stands today as a diversified conglomerate with interests in plantations, manufacturing, hardware, exports, and hospitality—guided by the same values that shaped our beginnings.",
-    image: "/assets/img/history-today.jpg",
+      "Meezan Hajiar begins investing in and managing estates, marking the Group’s earliest involvement in agriculture and plantation management.",
+    image: "/assets/img/history/6.jpeg",
+  },
+  {
+    year: "1940's",
+    title: "Growth of the Meezan Portfolio",
+    description:
+      "The portfolio expanded to include Ancoombra Estate, Gansarapola Estate, and additional tea, cocoa, and rubber lands. By the mid-1950’s, Meezan Hajiar had become one of the region’s most prominent private planters.",
+    image: "/assets/img/history/5.jpeg",
+  },
+  {
+    year: "1965",
+    title: "Leadership Transition",
+    description:
+      "Following the passing of Meezan Hajiar, the next generation steps forward to carry the business forward. The nationalisation era challenges the family with the government takeover of multiple estates.",
+    image: "/assets/img/history/8.jpg",
+  },
+  {
+    year: "1975",
+    title: "Resilience & Rebuilding",
+    description:
+      "Despite losing lands to nationalisation, Meezan Hajiar’s sons- Ihithisham Meezan and Ziaudeen Meezan, take over and rebuild the family’s commercial foundation, ensuring the Meezan name remains strong in trading, supply, and service industries",  
+    image: "/assets/img/history/1.jpg",
+  },
+  {
+    year: "Early 1990’s ",
+    title: "Reclamation of Estates",
+    description:
+    "During President Premadasa’s administration, several estates previously acquired by the government are successfully reclaimed. This marks the rebirth of the Meezan plantation sector.",  
+    image: "/assets/img/history/2.jpg",
+  },
+  {
+    year: "1990's - 2000's",
+    title: "Modernization of the Group",
+    description:
+    "Under the leadership of Ihithisham Meezan and Ziaudeen Meezan, this period witnessed enhanced management, upgraded manufacturing, stronger governance, and strategic expansion into agriculture, trading, hardware, and real estate laying the foundation for the Group’s modern structure",  
+    image: "/assets/img/history/12.jpg",
+  },
+  {
+    year: "2011",
+    title: "Recognition in Financial Excellence",
+    description:
+    "A member of the Meezan family is awarded as the Highest Taxpayer in the Matale District, reflecting the Group’s strong business performance and compliance.",  
+    image: "/assets/img/history/4.jpg",
+  },
+  {
+    year: "2020",
+    title: "Growth Into a Multi-Sector Group",
+    description:
+    "Meezan Group continues to grow steadily under strategic management and new-generation innovation, with diverse operations spanning plantations, hospitality, hardware and building materials, trading, services and agricultural products",  
+    image: "/assets/img/history/7.jpg",
+  },
+  {
+    year: "2025",
+    title: "Celebrating a Golden Legacy (1975-2025)",
+    description:
+    "Ihithisham Meezan and Ziaudeen Meezan commemorate fifty years of committed service. Their dedicated commitment, guided by unparalleled integrity and visionary leadership, has been instrumental in shaping the Meezan Group and fostering a deep, enduring commitment to the land and its people.",  
+    image: "/assets/img/history/9.png",
+  },
+  {
+    year: "2025",
+    title: "A Century of Excellence: Meezan Group Marks 100 Years (1925-2025) ",
+    description:
+    "In 2025, the Meezan Group proudly celebrates a significant landmark: 100 years of business excellence since its founding in 1925. This centennial not only honors the heritage and foundational values established a century ago but also underscores the Group's dynamic evolution and readiness to build upon this rich legacy for the next era of growth and leadership.",  
+    image: "/assets/logo/100-logo.png",
   },
 ];
 
@@ -36,26 +99,37 @@ const OurHistory = () => {
   return (
     <main className="w-full min-h-screen bg-[#F7F5EA] py-20">
       <section className="max-w-6xl mx-auto px-6 md:px-10">
-        
         {/* Header */}
-        <div className="text-center mb-14">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#7E7440]">
-            Our Journey
-          </p>
+        <div className="text-center mb-10">
           <h1 className="mt-2 font-messiri text-3xl md:text-4xl text-[#151515]">
-            Our History
+            Meezan Group 100 Years Legacy
           </h1>
-          <p className="mt-4 text-sm md:text-base text-[#4C4100] max-w-3xl mx-auto font-outfit">
-            From a modest beginning in the early 20th century to a diversified
-            group of companies today, Meezan Group has evolved with time while
-            staying true to its founding values of integrity, resilience, and
-            respect for people and place.
-          </p>
+        </div>
+        <div className="text-center mb-10">
+          <h1 className="mt-2 font-messiri text-3xl md:text-4xl text-[#151515]">
+            1925-2025
+          </h1>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
+        
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex justify-center mb-14"
+        >
+          <div className="w-full max-w-3xl">
+            <img
+              src="/assets/img/history/11.jpg"
+              alt="Meezan historical illustration"
+              className="w-full h-auto rounded-3xl shadow-md border border-[#D2C9A7]"
+            />
+          </div>
+        </motion.div>
 
+        {/* Timeline Wrapper (line starts here, after image) */}
+        <div className="relative">
           {/* Vertical line (desktop only) */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-[#D2C9A7]" />
 
@@ -74,7 +148,6 @@ const OurHistory = () => {
                     !isEven ? "md:flex-row-reverse" : ""
                   }`}
                 >
-                  
                   {/* Image */}
                   <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                     <div className="relative w-full max-w-sm">
@@ -94,17 +167,19 @@ const OurHistory = () => {
 
                   {/* Text */}
                   <div className="w-full md:w-1/2">
-                    <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#7E7440]">
+                    {/* ✅ YEAR bigger */}
+                    <p className="font-semibold tracking-[0.2em] uppercase text-[#7E7440] text-base md:text-lg">
                       {item.year}
                     </p>
-                    <h2 className="mt-2 font-messiri text-2xl text-[#151515]">
+
+                    <h2 className="mt-2 font-messiri text-2xl md:text-3xl text-[#151515]">
                       {item.title}
                     </h2>
+
                     <p className="mt-3 text-sm md:text-base text-[#4C4100] font-outfit leading-relaxed">
                       {item.description}
                     </p>
                   </div>
-
                 </motion.div>
               );
             })}

@@ -51,79 +51,67 @@ const Portfolio = () => {
                 </motion.div>
 
                 {/* Video s*/}
-                <motion.div
-
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="order-2 md:order-none w-full h-full"
-                >
+                <motion.div className="order-2 md:order-none w-full h-full overflow-hidden">
                     <video
-                        src="/assets/vdo/bang-vdo.mp4"
+                        src="/assets/vdo/new/bang-vdo.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-contain"
-                    ></video>
+                        className="w-full h-full object-cover scale-[1.15]"
+                    />
                 </motion.div>
+
             </div>
 
             {/* ---------------- ROW 2 ---------------- */}
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 w-full min-h-[320px] md:h-[520px]">
 
-                {/* IMAGE should be second on mobile */}
-                <motion.div
-
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="order-2 md:order-none w-full h-full"
-                >
+                {/* VIDEO */}
+                <motion.div className="order-2 md:order-none w-full h-full overflow-hidden">
                     <video
-                        src="/assets/vdo/tea-fac-vdo.mp4"
+                        src="/assets/vdo/new/tea-fac-vdo.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover"
-                    ></video>
+                        className="w-full h-full object-cover scale-[1.15]"
+                    />
                 </motion.div>
 
-                {/* TEXT should be first on mobile */}
+                {/* TEXT */}
                 <motion.div
                     variants={fadeupRight}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-none flex flex-col 
-                    md:items-start justify-center  items-center
-                        px-8
-                     md:px-20 py-12"
+      md:items-start justify-center items-center
+      px-8 md:px-20 py-12"
                 >
                     <h1
                         style={{ color: fontColor.headingtxt }}
-                        className="md:text-3xl text-2xl  md:pb-6 pb-2 font-headLine">{heroContent[1].lable}</h1>
-                    <p
-
-                        className="font-outfit  text-center md:text-left">{heroContent[1].desc}</p>
-                    {/* <div className="">
-                        <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
-                    </div> */}
-                    <button
-                        className="
-                            bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
-    
-                            flex justify-center items-center
-                            font-headLine  md:text-lg tex-md
-                            rounded-md text-white
-                        "
+                        className="md:text-3xl text-2xl md:pb-6 pb-2 font-headLine"
                     >
+                        {heroContent[1].lable}
+                    </h1>
+
+                    <p className="font-outfit text-center md:text-left">
+                        {heroContent[1].desc}
+                    </p>
+
+                    <button className="
+      bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
+      flex justify-center items-center
+      font-headLine md:text-lg
+      rounded-md text-white
+    ">
                         Explore More
                     </button>
-
                 </motion.div>
+
             </div>
+
             {/* ---------------- ROW 3 ---------------- */}
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
 
@@ -172,7 +160,7 @@ const Portfolio = () => {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full  object-center"
+                        className="w-full h-full object-center"
                     ></video>
                 </motion.div>
             </div>
@@ -275,7 +263,7 @@ const Portfolio = () => {
                     className="order-2 md:order-none w-full h-full"
                 >
                     <video
-                        src="/assets/vdo/Tea-vdo.mp4"
+                        src="/assets/vdo/new/Tea-vdo.mp4"
                         autoPlay
                         loop
                         muted
@@ -335,114 +323,13 @@ const Portfolio = () => {
                             rounded-md text-white
                         "
                     >
-                       Explore More
+                        Explore More
                     </button>
 
                 </motion.div>
             </div>
 
-            {/* ---------------- ROW 7 The team---------------- */}
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
 
-                {/* TEXT first on mobile */}
-                <motion.div
-                    variants={fadeupRight}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="order-1 md:order-none flex flex-col 
-      md:items-start justify-center items-center
-      px-8 md:px-20 py-12"
-                >
-                    <h1
-                        style={{ color: fontColor.headingtxt }}
-                        className="md:text-3xl text-2xl md:pb-6 pb-2 font-headLine"
-                    >
-                        {heroContent[6].lable}
-                    </h1>
-
-                    <p className="font-outfit text-center md:text-left">
-                        {heroContent[6].desc}
-                    </p>
-
-                    <button
-                        className="
-        bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
-        flex justify-center items-center
-        font-headLine md:text-lg tex-md
-        rounded-md text-white
-      "
-                    >
-                        Read More
-                    </button>
-                </motion.div>
-
-                {/* IMAGE same height as Row 7 video */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="order-2 md:order-none w-full h-full"
-                >
-                    <img
-                        src="/assets/img/team.jpg"
-                        alt="Your section image"
-                        className="w-full h-full object-cover"
-                    />
-                </motion.div>
-            </div>
-
-            {/* ---------------- ROW 8 Since 1925 ---------------- */}
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
-
-                {/* IMAGE should be second on mobile */}
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="order-2 md:order-none w-full h-full"
-                >
-                    <img
-                        src="/assets/img/Founder.jpg"
-                        alt="Your section image"
-                        className="w-full h-full object-cover"
-                    />
-                </motion.div>
-
-                {/* TEXT should be first on mobile */}
-                <motion.div
-                    variants={fadeupRight}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="order-1 md:order-none flex flex-col 
-                    md:items-start justify-center  items-center
-                        px-8
-                     md:px-20 py-12"
-                >
-                    <h1
-                        style={{ color: fontColor.headingtxt }}
-                        className="md:text-3xl text-2xl  md:pb-6 pb-2 font-headLine">{heroContent[7].lable}</h1>
-                    <p
-
-                        className="font-outfit  text-center md:text-left">{heroContent[7].desc}</p>
-                    {/* <div className="">
-                        <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
-                    </div> */}
-                    <button
-                        className="
-                            bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
-    
-                            flex justify-center items-center
-                            font-headLine  md:text-lg tex-md
-                            rounded-md text-white
-                        "
-                    >
-                        Read More
-                    </button>
-
-                </motion.div>
-            </div>
 
             {/* ---------------- ROW 9 Meezaniya inst ---------------- */}
             <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
@@ -549,6 +436,109 @@ const Portfolio = () => {
                         "
                     >
                         Explore More
+                    </button>
+
+                </motion.div>
+            </div>
+
+            {/* ---------------- ROW 7 The team---------------- */}
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
+
+                {/* TEXT first on mobile */}
+                <motion.div
+                    variants={fadeupRight}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="order-1 md:order-none flex flex-col 
+      md:items-start justify-center items-center
+      px-8 md:px-20 py-12"
+                >
+                    <h1
+                        style={{ color: fontColor.headingtxt }}
+                        className="md:text-3xl text-2xl md:pb-6 pb-2 font-headLine"
+                    >
+                        {heroContent[6].lable}
+                    </h1>
+
+                    <p className="font-outfit text-center md:text-left">
+                        {heroContent[6].desc}
+                    </p>
+
+                    <button
+                        className="
+        bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
+        flex justify-center items-center
+        font-headLine md:text-lg tex-md
+        rounded-md text-white
+      "
+                    >
+                        Read More
+                    </button>
+                </motion.div>
+
+                {/* IMAGE same height as Row 7 video */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="order-2 md:order-none w-full h-full"
+                >
+                    <img
+                        src="/assets/img/team.jpg"
+                        alt="Your section image"
+                        className="w-full h-full object-cover"
+                    />
+                </motion.div>
+            </div>
+
+            {/* ---------------- ROW 8 Since 1925 ---------------- */}
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2">
+
+                {/* IMAGE should be second on mobile */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="order-2 md:order-none w-full h-full"
+                >
+                    <img
+                        src="/assets/img/Founder.jpg"
+                        alt="Your section image"
+                        className="w-full h-full object-cover"
+                    />
+                </motion.div>
+
+                {/* TEXT should be first on mobile */}
+                <motion.div
+                    variants={fadeupRight}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="order-1 md:order-none flex flex-col 
+                    md:items-start justify-center  items-center
+                        px-8
+                     md:px-20 py-12"
+                >
+                    <h1
+                        style={{ color: fontColor.headingtxt }}
+                        className="md:text-3xl text-2xl  md:pb-6 pb-2 font-headLine">{heroContent[7].lable}</h1>
+                    <p
+
+                        className="font-outfit  text-center md:text-left">{heroContent[7].desc}</p>
+                    {/* <div className="">
+                        <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
+                    </div> */}
+                    <button
+                        className="
+                            bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
+    
+                            flex justify-center items-center
+                            font-headLine  md:text-lg tex-md
+                            rounded-md text-white
+                        "
+                    >
+                        Read More
                     </button>
 
                 </motion.div>

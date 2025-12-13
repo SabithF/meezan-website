@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import ChairmanSection from "./Chairman";
+
 import OurHistory from "./OurHistory.jsx";
 
 // Motion variants
@@ -24,9 +24,15 @@ const child = {
 const AboutBody = () => {
   return (
     <section className="w-full h-full overflow-hidden">
+      
 
-      {/* ====================== INTRO CARD ====================== */}
+      <div className="uppercase pt-[60px] md:pt-[90px] flex items-center justify-center">
+        <h1 className="text-[#3F4F2A] text-5xl md:text-6xl font-messiri">
+          About us
+        </h1>
+      </div>
       {/* ====================== INTRO CARD WITH LEAF ====================== */}
+      
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -40,6 +46,8 @@ const AboutBody = () => {
           alt="leaf illustration"
           className="absolute -left-10 md:-left-16 top-1/2 -translate-y-1/2 w-20 md:w-28 opacity-90 pointer-events-none select-none"
         />
+
+        
 
         {/* Card */}
         <div className="bg-[#EFE8C6] rounded-3xl p-10 md:p-16 shadow-md">
@@ -257,7 +265,21 @@ const AboutBody = () => {
 
 
 
-        {/* ====================== HISTORICAL PHOTO ARCHIVE ====================== */}
+        
+
+
+
+      </section>
+
+
+
+
+      {/* ====================== CHAIRMAN + HISTORY ====================== */}
+      {/* <ChairmanSection /> */}
+
+      <OurHistory />
+
+      {/* ====================== HISTORICAL PHOTO ARCHIVE ====================== */}
 
         <section className="max-w-6xl mx-auto px-6 md:px-12 py-20">
           <h2 className="text-center font-messiri text-3xl md:text-4xl text-[#3F4F2A] mb-10">
@@ -316,18 +338,6 @@ const AboutBody = () => {
 
           </div>
         </section>
-
-
-
-      </section>
-
-
-
-
-      {/* ====================== CHAIRMAN + HISTORY ====================== */}
-      {/* <ChairmanSection /> */}
-
-      <OurHistory />
 
     </section>
   );
