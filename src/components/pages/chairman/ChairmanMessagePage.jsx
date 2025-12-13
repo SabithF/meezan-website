@@ -248,22 +248,21 @@ const ChairmanMessagePage = () => {
                 </p>
               </motion.div>
 
-              <img
-                src="/assets/img/history/9.png"
-                alt="Meezan legacy image"
-                className="w-72 h-full object-cover transition-transform duration-700 hover:scale-105"
-              />
+              
 
               {/* ============ TWO LANDSCAPE IMAGES ============ */}
               <motion.div
                 variants={fadeChild}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
               >
-                <div className="overflow-hidden rounded-3xl shadow-lg">
+                
+              </motion.div>
+
+              <div className="overflow-hidden rounded-3xl shadow-lg">
                   <img
                     src="/assets/img/team/3.jpg"
                     alt="Historical Meezan moment"
-                    className="w-full h-[250px] md:h-[300px] object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full h-[250px] md:h-[500px] object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
 
@@ -271,10 +270,14 @@ const ChairmanMessagePage = () => {
                   <img
                     src="/assets/img/team/4.jpg"
                     alt="Meezan legacy image"
-                    className="w-full h-[250px] md:h-[300px] object-cover transition-transform duration-700 hover:scale-105"
+                    className="w-full h-[250px] md:h-[500px] object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
-              </motion.div>
+                <img
+                src="/assets/img/history/9.png"
+                alt="Meezan legacy image"
+                className="w-76 h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
             </section>
           )}
 
