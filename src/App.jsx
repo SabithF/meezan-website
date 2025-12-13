@@ -15,11 +15,13 @@ import Launch from "./components/Launch";
 function App() {
   const location = useLocation();
 
-  const hideNavBar = location.pathname === "/launch";
+  // hide layout elements only on /launch
+  const hideLayout = location.pathname === "/launch";
 
   return (
     <>
-      {!hideNavBar && <NavBar />}
+      {/* NAV */}
+      {!hideLayout && <NavBar />}
 
       <Routes>
         {/* Home */}
@@ -43,8 +45,9 @@ function App() {
         <Route path="/launch" element={<Launch />} />
       </Routes>
 
-      <Footer />
-      <FloatingLogo />
+      
+      {!hideLayout && <Footer />}
+       <FloatingLogo />
     </>
   );
 }
