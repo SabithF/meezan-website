@@ -57,7 +57,7 @@ const NavBar = () => {
         { lable: "Bangalow", to: "https://www.meezanbungalows.com/" }, 
         { lable: "Tea Factories", to: "/tea-factory" },
         { lable: "Meezan Teas", to: "/teas" },
-        { lable: "Plantation", to: "/plantations" }, 
+        { lable: "Plantation", to: "/plantation" }, 
         { lable: "Hatale Classic Tea Shop", to: "/tea" },
         { lable: "Hardware", to: "/hardware" }, 
       ],

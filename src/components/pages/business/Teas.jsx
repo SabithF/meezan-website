@@ -144,12 +144,6 @@ const MeezanTeasPage = () => {
                                 />
                             </motion.div>
                         </section>
-                        <motion.h2
-                            variants={fadeChild}
-                            className="text-3xl md:text-4xl font-messiri text-slate-900"
-                        >
-                            A Legacy in Every Cup
-                        </motion.h2>
 
                         <motion.p
                             variants={fadeChild}

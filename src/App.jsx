@@ -11,6 +11,9 @@ import TeaFactoriesPage from "./components/pages/business/TeaFactory";
 import FloatingLogo from "./components/FloatingLogo";
 import MeezanTeasPage from "./components/pages/business/Teas";
 import Launch from "./components/Launch";
+import Plantations from "./components/pages/business/Plantations"
+import Hardware from "./components/pages/business/Hardware";
+import ContactPage from "./components/Contact";
 
 function App() {
   const location = useLocation();
@@ -43,6 +46,9 @@ function App() {
         <Route path="/chairman-message" element={<ChairmanMessagePage />} />
         <Route path="/teas" element={<MeezanTeasPage />} />
         <Route path="/launch" element={<Launch />} />
+        <Route path="/plantation" element={<Plantations />} />
+        <Route path="/hardware" element={<Hardware />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
       

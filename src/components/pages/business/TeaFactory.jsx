@@ -317,7 +317,7 @@ const TeaFactoriesPage = () => {
                                         {/* Large main tile (left, 2 rows high) */}
                                         <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/ancoombra/2.JPG"
+                                                src="/assets/img/tea-fac/hatale/1.jpg"
                                                 alt="Ancoombra exterior"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
@@ -326,7 +326,7 @@ const TeaFactoriesPage = () => {
                                         {/* Right top */}
                                         <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/ancoombra/3.jpg"
+                                                src="/assets/img/tea-fac/hatale/2.jpg"
                                                 alt="Withering section"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
@@ -335,7 +335,7 @@ const TeaFactoriesPage = () => {
                                         {/* Right middle */}
                                         <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/ancoombra/4.jpg"
+                                                src="/assets/img/tea-fac/hatale/3.jpg"
                                                 alt="Leaf handling"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
@@ -344,7 +344,7 @@ const TeaFactoriesPage = () => {
                                         {/* Bottom left */}
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/ancoombra/5.jpg"
+                                                src="/assets/img/tea-fac/hatale/4.jpg"
                                                 alt="Factory interior"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
@@ -353,7 +353,7 @@ const TeaFactoriesPage = () => {
                                         {/* Bottom right */}
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/hatale/1.jpg"
+                                                src="/assets/img/tea-fac/hatale/17.jpg"
                                                 alt="Estate surroundings"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
