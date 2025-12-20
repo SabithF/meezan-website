@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { heroContent } from "../const";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
+
 
     const fadeupLeft = { hidden: { opacity: 0, x: -50 }, show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } } };
     const fadeupRight = { hidden: { opacity: 0, x: 50 }, show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } } };
@@ -36,17 +38,20 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[0].desc}</p>
-                    <button
-                        className="
+                    <Link to="https://www.meezanbungalows.com/">
+                        <button
+
+                            className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
                             flex justify-center items-center
                             font-headLine  md:text-lg tex-md
                             rounded-md text-white
                         "
-                    >
-                        Go to Page
-                    </button>
+                        >
+                            Go to Page
+                        </button>
+                    </Link>
 
                 </motion.div>
 
@@ -100,14 +105,17 @@ const Portfolio = () => {
                         {heroContent[1].desc}
                     </p>
 
-                    <button className="
+                    <Link to="/tea-factory">
+                        <button className="
       bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
       flex justify-center items-center
       font-headLine md:text-lg
       rounded-md text-white
     ">
-                        Explore More
-                    </button>
+                            Explore More
+                        </button>
+
+                    </Link>
                 </motion.div>
 
             </div>
@@ -132,7 +140,8 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[2].desc}</p>
-                    <button
+                    <Link to="/plantation">
+                        <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -143,6 +152,8 @@ const Portfolio = () => {
                     >
                         Explore More
                     </button>
+                    
+                    </Link>
 
                 </motion.div>
 
@@ -204,7 +215,8 @@ const Portfolio = () => {
 
                         className="font-outfit  text-center md:text-left">{heroContent[3].desc}</p>
 
-                    <button
+                   <Link to="/tea">
+                     <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -215,6 +227,9 @@ const Portfolio = () => {
                     >
                         Explore More
                     </button>
+                   
+
+                   </Link>
 
                 </motion.div>
             </div>
@@ -240,7 +255,8 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[4].desc}</p>
-                    <button
+                    <Link to="/teas">
+                        <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -251,6 +267,8 @@ const Portfolio = () => {
                     >
                         Read More
                     </button>
+                    
+                    </Link>
 
                 </motion.div>
 
@@ -314,7 +332,8 @@ const Portfolio = () => {
                     {/* <div className="">
                         <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
                     </div> */}
-                    <button
+                    <Link to="/hardware">
+                        <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -325,6 +344,7 @@ const Portfolio = () => {
                     >
                         Explore More
                     </button>
+                    </Link>
 
                 </motion.div>
             </div>
@@ -352,7 +372,8 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[8].desc}</p>
-                    <button
+                    <Link to="/">
+                        <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -363,6 +384,7 @@ const Portfolio = () => {
                     >
                         Explore More
                     </button>
+                    </Link>
 
                 </motion.div>
 
@@ -426,7 +448,8 @@ const Portfolio = () => {
                     {/* <div className="">
                         <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
                     </div> */}
-                    <button
+                    <Link to="/">
+                        <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -437,6 +460,8 @@ const Portfolio = () => {
                     >
                         Explore More
                     </button>
+
+                    </Link>
 
                 </motion.div>
             </div>
@@ -465,16 +490,20 @@ const Portfolio = () => {
                         {heroContent[6].desc}
                     </p>
 
-                    <button
+                    <Link to="/chairman-message">
+                        <button
                         className="
-        bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
-        flex justify-center items-center
-        font-headLine md:text-lg tex-md
-        rounded-md text-white
-      "
+                            bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
+    
+                            flex justify-center items-center
+                            font-headLine  md:text-lg tex-md
+                            rounded-md text-white
+                        "
                     >
                         Read More
                     </button>
+
+                    </Link>
                 </motion.div>
 
                 {/* IMAGE same height as Row 7 video */}
@@ -529,7 +558,8 @@ const Portfolio = () => {
                     {/* <div className="">
                         <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
                     </div> */}
-                    <button
+                     <Link to="/about">
+                        <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
     
@@ -540,6 +570,8 @@ const Portfolio = () => {
                     >
                         Read More
                     </button>
+
+                    </Link>
 
                 </motion.div>
             </div>
