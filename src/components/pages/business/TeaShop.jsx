@@ -36,31 +36,7 @@ const TeaShopsPage = () => {
           alt="Tea Plantation"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* <div className="absolute inset-0 bg-black/40" /> */}
-
-        {/* <div className="relative h-full w-full flex flex-col items-center justify-center text-white pt-10 px-4">
-
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            className="text-4xl md:text-6xl font-messiri tracking-tight"
-          >
-            Meezan Hatale Tea Shop
-          </motion.h1>
-
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            transition={{ delay: 0.2 }}
-            className="mt-4 text-lg opacity-90 max-w-2xl text-center"
-          >
-            Experience the finest flavours of Sri Lankan tea from our heritage shops,
-            nestled across stunning plantation landscapes.
-          </motion.p>
-
-        </div> */}
+        
       </section>
 
       {/* ===================== INTRO SECTION ===================== */}

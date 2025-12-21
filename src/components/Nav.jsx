@@ -40,7 +40,7 @@ const NavBar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // ✅ Nested structure for dropdowns
+  
   const NavItems = [
     {
       lable: "About us",
@@ -60,9 +60,10 @@ const NavBar = () => {
         { lable: "Plantation", to: "/plantation" }, 
         { lable: "Hatale Classic Tea Shop", to: "/tea" },
         { lable: "Hardware", to: "/hardware" }, 
+        { lable: "CSR Projects", to: "/csr" }, 
       ],
     },
-    { lable: "CSR", to: "/news" },
+    
     { lable: "Contact", to: "/contact" },
   ];
 

@@ -14,6 +14,7 @@ import Launch from "./components/Launch";
 import Plantations from "./components/pages/business/Plantations"
 import Hardware from "./components/pages/business/Hardware";
 import ContactPage from "./components/Contact";
+import CSR from "./components/pages/business/CSR";
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
               <div className="pt-[60px] md:pt-[90px]">
                 <Hero />
               </div>
+
               <Portfolio />
             </>
           }
@@ -49,6 +51,7 @@ function App() {
         <Route path="/plantation" element={<Plantations />} />
         <Route path="/hardware" element={<Hardware />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/csr" element={<CSR />} />
       </Routes>
 
       
