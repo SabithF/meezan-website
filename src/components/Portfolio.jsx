@@ -372,7 +372,7 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[8].desc}</p>
-                    <Link to="/">
+                    <Link to="/csr">
                         <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
@@ -448,7 +448,7 @@ const Portfolio = () => {
                     {/* <div className="">
                         <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
                     </div> */}
-                    <Link to="/">
+                    <Link to="/csr">
                         <button
                         className="
                             bg-[#447e9d] w-52 h-9 md:pb-1 md:mt-8 mt-5
