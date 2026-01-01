@@ -54,7 +54,7 @@ const NavBar = () => {
       lable: "Business",
       to: "/tea",
       children: [
-        { lable: "Bangalow", to: "https://www.meezanbungalows.com/" }, 
+        { lable: "Bungalow", to: "https://www.meezanbungalows.com/" }, 
         { lable: "Tea Factories", to: "/tea-factory" },
         { lable: "Meezan Teas", to: "/teas" },
         { lable: "Plantation", to: "/plantation" }, 

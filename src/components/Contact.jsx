@@ -119,12 +119,12 @@ const ContactPage = () => {
                 <div className="mt-6 space-y-4">
                   <InfoRow
                     label="Phone"
-                    value="+94 76 830 4310"
+                    value="+94 77 77 77 227"
                     hint="Mon–Fri, 9:00 AM – 6:00 PM"
                   />
                   <InfoRow
                     label="Email"
-                    value="meezanbungalow@sltnet.lk"
+                    value="meezans@sltnet.lk"
                     hint="We typically respond within 24–48 hours"
                   />
                 </div>

@@ -15,15 +15,15 @@ const fadeChild = {
 const ChairmanMessagePage = () => {
   const [activeTab, setActiveTab] = useState("chairman");
 
-  // ✅ you were using location.pathname, so we must define location
+  
   const location = useLocation();
 
-  // ✅ Scroll to top on route change (kept your logic)
+  
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [location.pathname]);
 
-  // ✅ Scroll to top when switching tabs
+  
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [activeTab]);
@@ -321,7 +321,7 @@ const ChairmanMessagePage = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 className="text-slate-700 leading-relaxed max-w-3xl"
               >
-                At the heart of the Meezan Group is a close-knit family built on dedication, sincerity, and a shared passion for the tea industry. Ihithisham Meezan and Ziaudeen Meezan, have spent nearly four decades working closely with the land, the people, and the craft of planting. 
+                At the heart of the Meezan Group is a close-knit family built on dedication, sincerity, and a shared passion for the tea industry. Ihithisham Meezan and Ziaudeen Mohideen, have spent nearly four decades working closely with the land, the people, and the craft of planting. 
                  </motion.p>
 
               {/* ========== FAMILY LEADER BLOCK ========== */}
@@ -336,7 +336,7 @@ const ChairmanMessagePage = () => {
                 <div className="overflow-hidden rounded-3xl shadow-lg">
                   <img
                     src="/assets/img/family/1.jpg"
-                    alt="Ziaudeen Meezan"
+                    alt="Ziaudeen Mohideen"
                     className="w-full h-[420px] md:h-[520px] object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
@@ -344,7 +344,7 @@ const ChairmanMessagePage = () => {
                 {/* TEXT SECTION */}
                 <div className="space-y-3">
                   <h3 className="font-messiri text-2xl md:text-3xl text-slate-900">
-                    Ziaudeen Meezan
+                    Ziaudeen Mohideen
                   </h3>
 
                   <p className="text-xs uppercase tracking-[0.18em] text-[#7E7440]">

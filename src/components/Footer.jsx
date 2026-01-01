@@ -36,16 +36,7 @@ const Footer = () => {
                   Bungalows
                 </a>
               </li>
-              <li>
-                <Link to="/tea-factory" className="hover:text-white transition">
-                  Facilities
-                </Link>
-              </li>
-              <li>
-                <Link to="/tea" className="hover:text-white transition">
-                  Booking
-                </Link>
-              </li>
+              
               <li>
                 <Link to="/contact" className="hover:text-white transition">
                   Contact
@@ -77,14 +68,14 @@ const Footer = () => {
                 href="tel:+94768304310"
                 className="block hover:text-white transition"
               >
-                +94 76 830 4310
+                +94 77 77 77 227
               </a>
 
               <a
                 href="mailto:meezanbungalow@sltnet.lk"
                 className="block hover:text-white transition break-all"
               >
-                meezanbungalow@sltnet.lk
+                meezans@sltnet.lk
               </a>
 
               {/* Social icons */}
