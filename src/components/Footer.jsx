@@ -26,7 +26,7 @@ const Footer = () => {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="https://www.meezanbungalows.com/"
                   target="_blank"
@@ -35,7 +35,7 @@ const Footer = () => {
                 >
                   Bungalows
                 </a>
-              </li>
+              </li> */}
               
               <li>
                 <Link to="/contact" className="hover:text-white transition">
