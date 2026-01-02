@@ -537,14 +537,15 @@ const Portfolio = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="order-1 md:order-1 w-full h-full"
+                    className="order-1 md:order-1 w-full h-full "
                 >
                     <img
-                        src="/assets/img/Founder.jpg"
-                        alt="Your section image"
+                        src="/assets/img/haji-2.jpeg"
+                        alt="Meezan founder 1925"
                         className="w-full h-full object-cover"
                     />
                 </motion.div>
+
 
                 {/* TEXT */}
                 <motion.div
@@ -563,9 +564,7 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[7].desc}</p>
-                    {/* <div className="">
-                        <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
-                    </div> */}
+
                     <Link to="/about">
                         <button
                             className="

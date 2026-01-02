@@ -26,18 +26,28 @@ const fadeChild = {
 };
 
 const TeaFactoriesPage = () => {
-    const [activeFactory, setActiveFactory] = useState("ancoombra"); // "hatale" | "ancoombra"
+    const [activeFactory, setActiveFactory] = useState("ancoombra"); 
 
     return (
         <main className="w-full font-outfit">
             {/* ===================== HERO SECTION ===================== */}
-            <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+            <section className="relative w-full overflow-hidden md:mt-0 mt-[72px]">
+                {/* Image container */}
+                <div className="relative w-full">
+                    <img
+                        src="/assets/img/banner/factory-banner.jpg"
+                        alt="Meezan Hardware"
+                        className="absolute top-0 left-0 w-full h-auto object-contain"
+                    />
+
+                </div>
+
                 <img
                     src="/assets/img/banner/factory-banner.jpg"
-                    alt="Tea Factory Banner"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    alt=""
+                    className="w-full h-auto object-contain opacity-0 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-black/35" />
+
             </section>
 
             {/* ===================== MAIN LAYOUT (MENU + CONTENT) ===================== */}
@@ -342,6 +352,22 @@ const TeaFactoriesPage = () => {
                                         </div>
 
                                         {/* Bottom left */}
+                                        <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
+                                            <img
+                                                src="/assets/img/tea-fac/hatale/4.jpg"
+                                                alt="Factory interior"
+                                                className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+                                            />
+                                        </div>
+
+                                        {/* Bottom right */}
+                                        <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
+                                            <img
+                                                src="/assets/img/tea-fac/hatale/17.jpg"
+                                                alt="Estate surroundings"
+                                                className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+                                            />
+                                        </div>
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
                                                 src="/assets/img/tea-fac/hatale/4.jpg"

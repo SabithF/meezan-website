@@ -69,38 +69,38 @@ const MeezanTeasPage = () => {
     // ===== Tea Data =====
     const teaItems = [
         {
-            title: "Meezan Black Tea",
-            desc: "A bold, aromatic blend with deep color and a strong finish.",
+            title: "BOP SPECIAL",
+            desc: "A refined Broken Orange Pekoe with smaller, even particles that brew a strong, bright, and brisk cup.",
             img: "/assets/img/teas/2.png",
         },
         {
-            title: "Meezan Premium Blend",
-            desc: "Smooth taste crafted for everyday comfort and consistency.",
-            img: "/assets/img/teas/3.png",
-        },
-        {
-            title: "Meezan Gold",
-            desc: "Refined flavor profile with a premium aroma and rich brew.",
-            img: "/assets/img/teas/4.png",
-        },
-        {
-            title: "Meezan Special",
-            desc: "Strong and satisfying — ideal for classic milk tea.",
+            title: "OP (Orange Pekoe)",
+            desc: "Long, wiry whole leaves that produce a mild, smooth, and aromatic liquor.",
             img: "/assets/img/teas/5.png",
         },
         {
-            title: "Meezan Classic",
-            desc: "A timeless blend with balanced notes and a smooth finish.",
+            title: "OPA (Orange Pekoe A)",
+            desc: "Extra-long, twisted leaf grade offering a delicate, light-bodied cup with a subtle aroma.",
             img: "/assets/img/teas/6.png",
         },
         {
-            title: "Meezan Supreme",
-            desc: "An elevated blend for refined tea moments.",
+            title: "PEKOE",
+            desc: "Shorter, curly leaf style that yields a rich, medium-bodied cup with good briskness.",
             img: "/assets/img/teas/7.png",
         },
         {
-            title: "Meezan Heritage",
-            desc: "Celebrating generations of tea craftsmanship.",
+            title: "FBOPF SPECIAL",
+            desc: "Small, neat leaf particles with golden tips, giving a bright, full-bodied, flavourful brew",
+            img: "/assets/img/teas/4.png",
+        },
+        {
+            title: "BOP1 (Broken Orange Pekoe 1)",
+            desc: "A cleaner, more uniform broken-leaf grade that delivers a strong, smooth, well-balanced cup.",
+            img: "/assets/img/teas/3.png",
+        },
+        {
+            title: "Silver Tips",
+            desc: "Rare handpicked buds with a silvery sheen, producing a very delicate, sweet, and aromatic infusion.",
             img: "/assets/img/teas/8.png",
         },
     ];
@@ -108,13 +108,23 @@ const MeezanTeasPage = () => {
     return (
         <main className="w-full font-outfit">
             {/* ===================== HERO ===================== */}
-            <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
+            <section className="relative w-full overflow-hidden md:mt-0 mt-[72px]">
+                {/* Image container */}
+                <div className="relative w-full">
+                    <img
+                        src="/assets/img/banner/teas-banner.jpg"
+                        alt="Meezan Hardware"
+                        className="absolute top-0 left-0 w-full h-auto object-contain"
+                    />
+
+                </div>
+
                 <img
                     src="/assets/img/banner/teas-banner.jpg"
-                    alt="Meezan Teas"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    alt=""
+                    className="w-full h-auto object-contain opacity-0 pointer-events-none"
                 />
-                <div className="absolute inset-0 bg-black/35" />
+
             </section>
 
             {/* ===================== INTRO ===================== */}
@@ -127,7 +137,7 @@ const MeezanTeasPage = () => {
                         viewport={{ once: true, amount: 0.4 }}
                         className="space-y-5"
                     >
-                        
+
 
                         <section className="max-w-5xl mx-auto">
                             <motion.div
@@ -173,8 +183,7 @@ const MeezanTeasPage = () => {
                     </motion.div>
                 </section>
             </section>
-
-            {/* ===================== AUTO SLIDER ===================== */}
+            {/* Tea slider */}
             <section className="w-full py-20">
                 <h2 className="text-3xl md:text-4xl text-center font-messiri text-slate-900 mb-14">
                     Our Tea Collection
@@ -183,8 +192,26 @@ const MeezanTeasPage = () => {
                 <div className="relative overflow-hidden w-full">
                     <motion.div
                         ref={trackRef}
-                        className="flex gap-10 px-6 md:px-12 lg:px-20"
+                        className="flex gap-10 px-6 md:px-12 lg:px-20 cursor-grab active:cursor-grabbing"
                         style={{ x }}
+                        // ✅ manual drag
+                        drag="x"
+                        dragConstraints={{ left: -halfWidth, right: 0 }}
+                        dragElastic={0.05}
+                        onDragStart={() => setIsPaused(true)}
+                        onDragEnd={() => {
+                            setIsPaused(false);
+
+                            // ✅ keep loop seamless after dragging
+                            let current = x.get();
+
+                            // normalize into [-halfWidth, 0]
+                            if (current <= -halfWidth) current = current % -halfWidth;
+                            if (current > 0) current = current % -halfWidth;
+
+                            x.set(current);
+                        }}
+                        // ✅ pause on hover/touch too
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                         onTouchStart={() => setIsPaused(true)}
@@ -203,6 +230,7 @@ const MeezanTeasPage = () => {
             2xl:min-w-[360px]
             flex flex-col items-center
             group
+            select-none
           "
                             >
                                 <motion.img
@@ -217,6 +245,7 @@ const MeezanTeasPage = () => {
               lg:max-h-[340px]
               xl:max-h-[360px]
               object-contain
+              pointer-events-none
             "
                                 />
 
@@ -248,6 +277,7 @@ const MeezanTeasPage = () => {
                     <div className="pointer-events-none absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent" />
                 </div>
             </section>
+
 
         </main>
     );

@@ -48,57 +48,64 @@ const historyData = [
     year: "1975",
     title: "Resilience & Rebuilding",
     description:
-      "Despite losing lands to nationalisation, Meezan Hajiar’s sons- Ihithisham Meezan and Ziaudeen Meezan, take over and rebuild the family’s commercial foundation, ensuring the Meezan name remains strong in trading, supply, and service industries",  
+      "Despite losing lands to nationalisation, Meezan Hajiar’s sons- Ihithisham Meezan and Ziaudeen Meezan, take over and rebuild the family’s commercial foundation, ensuring the Meezan name remains strong in trading, supply, and service industries",
     image: "/assets/img/history/1.jpg",
   },
   {
     year: "Early 1990’s ",
     title: "Reclamation of Estates",
     description:
-    "During President Premadasa’s administration, several estates previously acquired by the government are successfully reclaimed. This marks the rebirth of the Meezan plantation sector.",  
+      "During President Premadasa’s administration, several estates previously acquired by the government are successfully reclaimed. This marks the rebirth of the Meezan plantation sector.",
     image: "/assets/img/history/2.jpg",
   },
   {
     year: "1990's - 2000's",
     title: "Modernization of the Group",
     description:
-    "Under the leadership of Ihithisham Meezan and Ziaudeen Meezan, this period witnessed enhanced management, upgraded manufacturing, stronger governance, and strategic expansion into agriculture, trading, hardware, and real estate laying the foundation for the Group’s modern structure",  
+      "Under the leadership of Ihithisham Meezan and Ziaudeen Meezan, this period witnessed enhanced management, upgraded manufacturing, stronger governance, and strategic expansion into agriculture, trading, hardware, and real estate laying the foundation for the Group’s modern structure",
     image: "/assets/img/history/12.jpg",
   },
   {
     year: "2011",
     title: "Recognition in Financial Excellence",
     description:
-    "A member of the Meezan family is awarded as the Highest Taxpayer in the Matale District, reflecting the Group’s strong business performance and compliance.",  
+      "A member of the Meezan family is awarded as the Highest Taxpayer in the Matale District, reflecting the Group’s strong business performance and compliance.",
     image: "/assets/img/history/4.jpg",
   },
   {
     year: "2020",
     title: "Growth Into a Multi-Sector Group",
     description:
-    "Meezan Group continues to grow steadily under strategic management and new-generation innovation, with diverse operations spanning plantations, hospitality, hardware and building materials, trading, services and agricultural products",  
+      "Meezan Group continues to grow steadily under strategic management and new-generation innovation, with diverse operations spanning plantations, hospitality, hardware and building materials, trading, services and agricultural products",
     image: "/assets/img/history/7.jpg",
   },
   {
     year: "2025",
     title: "Celebrating a Golden Legacy (1975-2025)",
     description:
-    "Ihithisham Meezan and Ziaudeen Meezan commemorate fifty years of committed service. Their dedicated commitment, guided by unparalleled integrity and visionary leadership, has been instrumental in shaping the Meezan Group and fostering a deep, enduring commitment to the land and its people.",  
+      "Ihithisham Meezan and Ziaudeen Meezan commemorate fifty years of committed service. Their dedicated commitment, guided by unparalleled integrity and visionary leadership, has been instrumental in shaping the Meezan Group and fostering a deep, enduring commitment to the land and its people.",
     image: "/assets/img/history/9.png",
   },
   {
     year: "2025",
     title: "A Century of Excellence: Meezan Group Marks 100 Years (1925-2025) ",
     description:
-    "In 2025, the Meezan Group proudly celebrates a significant landmark: 100 years of business excellence since its founding in 1925. This centennial not only honors the heritage and foundational values established a century ago but also underscores the Group's dynamic evolution and readiness to build upon this rich legacy for the next era of growth and leadership.",  
+      "In 2025, the Meezan Group proudly celebrates a significant landmark: 100 years of business excellence since its founding in 1925. This centennial not only honors the heritage and foundational values established a century ago but also underscores the Group's dynamic evolution and readiness to build upon this rich legacy for the next era of growth and leadership.",
     image: "/assets/logo/100-logo.png",
   },
 ];
 
+
+
+
 const OurHistory = () => {
+
+
   return (
     <main className="w-full min-h-screen bg-[#F7F5EA] py-20">
-      <section className="max-w-6xl mx-auto px-6 md:px-10">
+      <section 
+      id="ourHistory"
+      className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="mt-2 font-messiri text-3xl md:text-4xl text-[#151515]">
@@ -111,7 +118,7 @@ const OurHistory = () => {
           </h1>
         </div>
 
-        
+
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +135,7 @@ const OurHistory = () => {
           </div>
         </motion.div>
 
-        {/* Timeline Wrapper (line starts here, after image) */}
+
         <div className="relative">
           {/* Vertical line (desktop only) */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-[#D2C9A7]" />
@@ -136,6 +143,9 @@ const OurHistory = () => {
           <div className="space-y-12">
             {historyData.map((item, index) => {
               const isEven = index % 2 === 0;
+              const isLastTwo = index >= historyData.length - 2;
+              
+              
 
               return (
                 <motion.div
@@ -144,21 +154,40 @@ const OurHistory = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.7, delay: index * 0.1 }}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
-                    !isEven ? "md:flex-row-reverse" : ""
-                  }`}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${!isEven ? "md:flex-row-reverse" : ""
+                    }`}
                 >
+
                   {/* Image */}
-                  <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+                  <div
+                    className={`w-full md:w-1/2 flex justify-center ${isEven ? "md:justify-end" : "md:justify-start"
+                      }`}
+                  >
                     <div className="relative w-full max-w-sm">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-64 md:h-72 object-cover rounded-3xl shadow-md"
-                      />
-                      <div className="absolute -top-4 -left-4 h-10 w-10 rounded-2xl bg-[#EFE8C6] -z-10 opacity-70" />
+                      <div className="w-full h-64 md:h-72 overflow-hidden rounded-3xl ">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          loading="lazy"
+                          className={`
+    transition-all duration-300
+    ${isLastTwo
+                              ? "object-contain p-6 md:p-1 scale-100"
+                              : "object-cover"}
+    w-full h-full
+    ${isLastTwo ? "" : "shadow-md"}
+  `}
+                        />
+
+                      </div>
+
+                      {!isLastTwo && (
+                        <div className="absolute -top-4 -left-4 h-20 w-20 rounded-2xl -z-10 " />
+                      )}
                     </div>
                   </div>
+
+
 
                   {/* Dot in the middle (desktop) */}
                   <div className="hidden md:flex flex-col items-center justify-center w-10">
@@ -167,7 +196,7 @@ const OurHistory = () => {
 
                   {/* Text */}
                   <div className="w-full md:w-1/2">
-                    {/* ✅ YEAR bigger */}
+                    {/* ✅  */}
                     <p className="font-semibold tracking-[0.2em] uppercase text-[#7E7440] text-base md:text-lg">
                       {item.year}
                     </p>

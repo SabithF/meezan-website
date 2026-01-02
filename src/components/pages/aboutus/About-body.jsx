@@ -192,18 +192,22 @@ const AboutBody = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            className=" flex items-center justify-center"
           >
             <img
-              src="/assets/img/1925/1925-main.jpg"
+              src="/assets/img/haji-1.jpeg"
               alt="Meezan founding history"
               className="
-      w-full
-      h-[220px]        
-      sm:h-[280px]
-      md:h-[450px]
-      lg:h-[600px]
-      object-cover
-      object-center
+              
+            w-fit
+            h-[220px]        
+            sm:h-[280px]
+            md:h-[450px]
+            lg:h-[650px]
+            object-contain
+            object-center
+            shadow-lg
+            transition-transform duration-700 hover:scale-105
     "
             />
           </motion.div>
@@ -272,22 +276,12 @@ const AboutBody = () => {
 
         </section>
 
-
-
-
-
-
-
-
       </section>
 
+      <div id="our-history" className="scroll-mt-24">
+        <OurHistory />
+      </div>
 
-
-
-      {/* ====================== CHAIRMAN + HISTORY ====================== */}
-      {/* <ChairmanSection /> */}
-
-      <OurHistory />
 
       {/* ====================== HISTORICAL PHOTO ARCHIVE ====================== */}
 
@@ -296,58 +290,58 @@ const AboutBody = () => {
           A Glimpse Into Our History
         </h2>
 
-        <div className="grid grid-cols-12 gap-5">
-
+        <div className="grid grid-cols-12 gap-4">
           {/* ================= LARGE IMAGE LEFT ================= */}
-          <div className="col-span-12 md:col-span-7 rounded-3xl overflow-hidden shadow-lg h-[350px] md:h-[420px]">
+          <div className="col-span-12 md:col-span-7 overflow-hidden h-[220px] md:h-fit w-full">
             <img
               src="/assets/img/1925/1.jpg"
-              className="w-full h-full object-top grayscale hover:grayscale-0 
-                transition-all duration-500"
+              className="w-full h-full object-center grayscale hover:grayscale-0 hover:scale-[1.03] transition-all duration-700"
               alt="Meezan historical photo 1"
             />
           </div>
 
           {/* ========== STACKED RIGHT IMAGES ========== */}
-          <div className="col-span-12 md:col-span-5 flex flex-col gap-5">
-
-            <div className="rounded-3xl overflow-hidden shadow-lg h-[180px] md:h-[200px]">
+          <div className="col-span-12 md:col-span-5 flex flex-col gap-4">
+            <div className="overflow-hidden h-[220px] md:h-1/2">
               <img
                 src="/assets/img/1925/8.jpg"
-                className="w-full  object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-fill grayscale hover:grayscale-0 hover:scale-[1.03] transition-all duration-700"
                 alt="Meezan historical photo 2"
               />
             </div>
 
-            <div className="rounded-3xl overflow-hidden shadow-lg h-[180px] md:h-[200px]">
+            <div className="overflow-hidden h-[220px] md:h-[220px]">
               <img
                 src="/assets/img/1925/9.jpg"
-                className="w-full   object-contain grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-fill grayscale hover:grayscale-0 hover:scale-[1.03] transition-all duration-700"
                 alt="Meezan historical photo 3"
               />
             </div>
-
           </div>
 
           {/* ========== TWO BOTTOM WIDE IMAGES ========== */}
-          <div className="col-span-12 md:col-span-6 rounded-3xl overflow-hidden shadow-lg h-[260px]">
+          <div className="col-span-12 md:col-span-6 overflow-hidden h-[220px] md:h-[300px] md:-mt-6">
             <img
               src="/assets/img/1925/4.jpeg"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-[1.03] transition-all duration-700"
               alt="Meezan historical photo 4"
             />
           </div>
 
-          <div className="col-span-12 md:col-span-6 rounded-3xl overflow-hidden shadow-lg h-[260px]">
+          <div className="col-span-12 md:col-span-6 overflow-hidden h-[220px] md:h-[300px] md:-mt-6">
             <img
               src="/assets/img/1925/5.jpg"
-              className="w-full  object-cover grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-[1.03] transition-all duration-700"
               alt="Meezan historical photo 5"
             />
           </div>
-
         </div>
+
+
       </section>
+
+
+
 
     </section>
   );

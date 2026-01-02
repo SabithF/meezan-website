@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 // ===== Motion Variants =====
 const fadeUp = {
@@ -153,27 +154,53 @@ const CSR = () => {
                                     >
                                         Meezan Institute of Technology (MIT) is a leading provider of computer education in Sri Lanka, offering courses from beginner to advanced levels in programming, software development, web design, networking, and security.With experienced faculty and hands on teaching, MIT equips students with practical skills for the digital world, supported by tutoring, career guidance, and job placement services. </motion.p>
 
-                                    
+
                                 </motion.div>
                             </section>
 
-                            
-                            {/* ===== Gallery (Ancoombra) ===== */} 
-                            
-                            <section className="max-w-5xl mx-auto py-16 px-2 md:px-0"> 
+                            <motion.div
+                                variants={fadeChild}
+                                className="pt-1"
+                            >
+                                <Link to="https://mit.lk/">
+                                <button
+                                    className="
+                                        inline-flex items-center gap-2
+                                        px-6 py-3
+                                        text-sm font-medium
+                                        text-white
+                                        bg-[#3F4F2A]
+                                        rounded-full
+                                        hover:bg-[#2F3D20]
+                                        transition-colors duration-300
+                                        "
+
+                                >
+                                    Read More
+                                    <span className="text-lg leading-none">→</span>
+                                </button>
+                                
+                                </Link>
+                            </motion.div>
+
+
+
+                            {/* ===== Gallery (Ancoombra) ===== */}
+
+                            {/* <section className="max-w-5xl mx-auto py-16 px-2 md:px-0"> 
                                 <h2 className="text-3xl font-messiri text-center mb-10"> 
                                     Meezan Institute of Technology (MIT) </h2> 
                                     <div className="bg-slate-50 rounded-3xl p-4 md:p-6 shadow-sm"> 
                                         <div className="grid grid-cols-12 gap-4 md:auto-rows-[190px] 
-                                        lg:auto-rows-[220px]" > {/* Large main tile (left, 2 rows high) */} 
+                                        lg:auto-rows-[220px]" > 
                                         <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
-                                            <img src="/assets/img/csr/mit/mit-1.jpg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right top */}
+                                            <img src="/assets/img/csr/mit/mit-1.jpg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> 
                                              <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
                                                 <img src="/assets/img/csr/mit/mit-2.jpg" alt="Withering section" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" />
-                                                 </div> {/* Right middle */} 
+                                                 </div> 
                                                  <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
                                                     <img src="/assets/img/csr/mit/mit-3.jpg" alt="Leaf handling" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> 
-                                                    </div>  </div> </div> </section>
+                                                    </div>  </div> </div> </section> */}
                         </>
                     )}
 
@@ -192,7 +219,7 @@ const CSR = () => {
                                     <img
                                         src="/assets/img/csr/inst/inst-1.jpg"
                                         alt="Hatale Tea Factory"
-                                        className="w-full h-[260px] md:h-[420px] object-cover transition-transform duration-700 hover:scale-105"
+                                        className="w-full h-[260px] md:h-[420px] object-fill transition-transform duration-700 hover:scale-105"
                                     />
                                 </motion.div>
                             </section>
@@ -218,24 +245,52 @@ const CSR = () => {
                                         className="text-slate-600 leading-relaxed"
                                     >
                                         Meezaniyyah Institute, a non-profit founded in 1954 and based in Kurugoda, Kandy, focuses on teaching the Holy Quran and Arabic while fostering an inclusive, supportive learning environment. Other subjects are taught using modern technology and advanced educational methods to ensure a comprehensive education for students from all walks of life. </motion.p>
-                                     </motion.div>
+                                </motion.div>
                             </section>
 
-                            {/* ===== Gallery ===== */}
-                            <section className="max-w-5xl mx-auto py-16 px-2 md:px-0"> 
+                            <motion.div
+                                variants={fadeChild}
+                                className="pt-1"
+                            >
+                                <Link to="https://www.meezaniyyah.com/">
+                                <button
+                                    className="
+                                        inline-flex items-center gap-2
+                                        px-6 py-3
+                                        text-sm font-medium
+                                        text-white
+                                        bg-[#3F4F2A]
+                                        rounded-full
+                                        hover:bg-[#2F3D20]
+                                        transition-colors duration-300
+                                        "
+
+                                >
+                                    Read More
+                                    <span className="text-lg leading-none">→</span>
+                                </button>
+                                
+                                </Link>
+                            </motion.div>
+
+
+
+                            {/* <section className="max-w-5xl mx-auto py-16 px-2 md:px-0"> 
                                 <h2 className="text-3xl font-messiri text-center mb-10"> 
                                     Meezaniyyah Institute </h2> 
                                     <div className="bg-slate-50 rounded-3xl p-4 md:p-6 shadow-sm"> 
                                         <div className="grid grid-cols-12 gap-4 md:auto-rows-[190px] 
-                                        lg:auto-rows-[220px]" > {/* Large main tile (left, 2 rows high) */} 
+                                        lg:auto-rows-[220px]" > 
                                         <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
-                                            <img src="/assets/img/csr/inst/inst-1.jpg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right top */}
+                                            <img src="/assets/img/csr/inst/inst-1.jpg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> 
                                              <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
                                                 <img src="/assets/img/csr/inst/inst-2.jpg" alt="Withering section" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" />
-                                                 </div> {/* Right middle */} 
+                                                 </div> 
                                                  <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
                                                     <img src="/assets/img/csr/inst/inst-3.jpg" alt="Leaf handling" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> 
-                                                    </div>  </div> </div> </section></>
+                                                    </div>  </div> </div> </section> */}
+
+                        </>
                     )}
                 </div>
             </section>

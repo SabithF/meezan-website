@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const FloatingLogo = () => {
   return (
-    <Link
-      to="/"
-      aria-label="Go to home"
+    <HashLink
+      smooth
+      to="/about#our-history"
+      aria-label="Go to Our History"
       className="
         fixed bottom-4 right-4 z-[9999]
         w-14 h-14 md:w-20 md:h-20
@@ -18,10 +19,10 @@ const FloatingLogo = () => {
     >
       <img
         src="/assets/logo/100-logo.png"
-        alt="Company logo"
+        alt="Meezan 100 Years Logo"
         className="w-16 h-16 object-contain"
       />
-    </Link>
+    </HashLink>
   );
 };
 

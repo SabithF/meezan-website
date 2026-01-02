@@ -30,14 +30,24 @@ const TeaShopsPage = () => {
     <main className="w-full font-outfit">
 
       {/* ===================== HERO SECTION ===================== */}
-      <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
-        <img
-          src="/assets/img/banner/teaShop-banner.jpg"
-          alt="Tea Plantation"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        
-      </section>
+      <section className="relative w-full overflow-hidden md:mt-0 mt-[72px]">
+                {/* Image container */}
+                <div className="relative w-full">
+                    <img
+                        src="/assets/img/banner/teaShop-banner.jpg"
+                        alt="Meezan Hardware"
+                        className="absolute top-0 left-0 w-full h-auto object-contain"
+                    />
+
+                </div>
+
+                <img
+                    src="/assets/img/banner/teaShop-banner.jpg"
+                    alt=""
+                    className="w-full h-auto object-contain opacity-0 pointer-events-none"
+                />
+
+            </section>
 
       {/* ===================== INTRO SECTION ===================== */}
       <section className="max-w-6xl mx-auto py-20 px-4">
