@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "motion/react";
 import { heroContent } from "../const";
 import { Link } from "react-router-dom";
+import LazyVideo from "./LazyVideo";
+
+
 
 const Portfolio = () => {
 
@@ -57,14 +60,21 @@ const Portfolio = () => {
 
                 {/* VIDEO */}
                 <motion.div className="order-1 md:order-2 w-full h-full overflow-hidden">
-                    <video
+                    <LazyVideo
+                        src="/assets/vdo/new/tea-fac-vdo.mp4"
+                        poster="/assets/img/Plantation.jpg"
+                        className="w-full h-full object-cover scale-[1.8]"
+                        rootMargin="300px"
+                    />
+
+                    {/* <video
                         src="/assets/vdo/new/tea-fac-vdo.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full object-cover scale-[1.15]"
-                    />
+                    /> */}
                 </motion.div>
 
             </div>
@@ -81,14 +91,20 @@ const Portfolio = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-1 w-full h-full bg-white"
                 >
-                    <video
+                    <LazyVideo
+                        src="/assets/vdo/plantation-vdo.mp4"
+                        poster="/assets/img/Plantation.jpg"
+                        className="w-full h-full object-center"
+                        rootMargin="300px"
+                    />
+                    {/* <video
                         src="/assets/vdo/plantation-vdo.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full object-center"
-                    />
+                    /> */}
                 </motion.div>
 
                 {/* TEXT */}
@@ -170,14 +186,21 @@ const Portfolio = () => {
 
 
                 <motion.div className="order-1 md:order-2 w-full h-full overflow-hidden">
-                    <video
+                    <LazyVideo
+                        src="/assets/vdo/new/bang-vdo.mp4"
+                        poster="/assets/img/bung-02.jpg"
+                        className="w-full h-full object-cover scale-[1.15]"
+                        rootMargin="300px"
+                    />
+
+                    {/* <video
                         src="/assets/vdo/new/bang-vdo.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full object-cover scale-[1.15]"
-                    />
+                    /> */}
                 </motion.div>
 
             </div>
@@ -197,14 +220,21 @@ const Portfolio = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-1 w-full h-full"
                 >
-                    <video
+                    <LazyVideo
+                        src="/assets/vdo/mz-teas-clip.mp4"
+                        poster="/assets/img/bung-02.jpg" //need to change
+                        className="w-full h-full object-cover"
+                        rootMargin="300px"
+                    />
+
+                    {/* <video
                         src="/assets/vdo/mz-teas-clip.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full object-cover"
-                    ></video>
+                    ></video> */}
                 </motion.div>
 
                 {/* TEXT */}
@@ -290,14 +320,21 @@ const Portfolio = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-2 w-full h-full"
                 >
-                    <video
+
+                    <LazyVideo
+                        src="/assets/vdo/new/Tea-vdo.mp4"
+                        poster="/assets/img/bung-02.jpg" //need to change
+                        className="w-full h-full object-cover"
+                        rootMargin="300px"
+                    />
+                    {/* <video
                         src="/assets/vdo/new/Tea-vdo.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full object-cover"
-                    ></video>
+                    ></video> */}
                 </motion.div>
             </div>
 
@@ -312,14 +349,21 @@ const Portfolio = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-1 w-full h-full"
                 >
-                    <video
+                    <LazyVideo
+                        src="/assets/vdo/mz-hardware.mp4"
+                        poster="/assets/img/hardware.jpg"
+                        className="w-full h-full object-cover"
+                        rootMargin="300px"
+                    />
+                    
+                    {/* <video
                         src="/assets/vdo/mz-hardware.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full  object-center"
-                    ></video>
+                    ></video> */}
                 </motion.div>
 
                 {/* TEXT */}
@@ -404,14 +448,21 @@ const Portfolio = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-2 w-full h-full"
                 >
-                    <video
+                    <LazyVideo
+                        src="/assets/vdo/mz-inst.mp4"
+                        poster="/assets/img/hardware.jpg"
+                        className="w-full h-full object-cover"
+                        rootMargin="300px"
+                    />
+                    
+                    {/* <video
                         src="/assets/vdo/mz-inst.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full object-cover"
-                    ></video>
+                    ></video> */}
                 </motion.div>
             </div>
 
@@ -426,14 +477,21 @@ const Portfolio = () => {
                     viewport={{ once: true, amount: 0.2 }}
                     className="order-1 md:order-1 w-full h-full"
                 >
-                    <video
+                     <LazyVideo
+                        src="/assets/vdo/mit.mp4"
+                        poster="/assets/img/hardware.jpg" // need to change
+                        className="w-full h-full object-cover"
+                        rootMargin="300px"
+                    />
+
+                    {/* <video
                         src="/assets/vdo/mit.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-full  object-center"
-                    ></video>
+                    ></video> */}
                 </motion.div>
 
                 {/* TEXT */}

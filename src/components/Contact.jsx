@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "motion/react";
+// import emailjs from '@emailjs/browser';
+
 
 // ===== Motion Variants =====
 const fadeUp = {
@@ -26,6 +28,8 @@ const fadeChild = {
 };
 
 const ContactPage = () => {
+  const formRef = useRef();
+  const [alertBox, setAlert] = useState(null)
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -34,6 +38,8 @@ const ContactPage = () => {
     message: "",
   });
 
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((p) => ({ ...p, [name]: value }));
@@ -41,20 +47,47 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log("Contact form submitted:", form);
 
-    setForm({
-      fullName: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+    // email js
+    emailjs.send(
+      '',
+      '',
+      {
+        from_name: form.name,
+        to_name: 'Meezan Group of Compnies',
+        from_email: form.email,
+        to_email: 'meezans@sltnet.lk',
+        message: form.message,
+
+      },
+      ''
+    )
+      .then(()=> {
+        setLoading(false);
+        setAlert(true);
+        setForm({
+          fullName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+
+
+      }, (error) => {
+        setLoading(false);
+        console.log(error);
+        alert('Something went wrong.');
+    })
+
+
+    
   };
 
   return (
     <main className="w-full font-outfit">
-      {/* ===================== HERO ===================== */}
       <section className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden">
         <img
           src="/assets/img/banner/team-banner.jpg"
