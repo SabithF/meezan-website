@@ -136,7 +136,6 @@ const NavBar = () => {
           </div>
         </Link>
 
-        {/* ✅ DESKTOP NAV (HOVER DROPDOWNS) */}
         <div className="gap-10 pr-4 text-md hidden md:flex font-outfit items-center">
           {NavItems.map((item, index) => {
             const hasChildren = Array.isArray(item.children);
@@ -185,7 +184,7 @@ const NavBar = () => {
                 {/* Dropdown */}
                 <div
                   className="
-                    absolute left-0 top-full mt-3 w-60
+                    absolute left-0 top-full mt-3 w-52
                     rounded-2xl bg-[#192638]/95 backdrop-blur-xl
                     border border-white/10 shadow-xl
                     opacity-0 invisible translate-y-2

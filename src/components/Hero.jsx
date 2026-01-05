@@ -14,24 +14,9 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
   const timerRef = useRef(null);
 
-  const changeTo = useCallback(
-    (nextIndex) => {
-      if (nextIndex === current) return;
-
-      const img = new Image();
-      img.src = images[nextIndex];
-
-      const done = () => setCurrent(nextIndex);
-
-      if (img.decode) {
-        img.decode().then(done).catch(done);
-      } else {
-        img.onload = done;
-        img.onerror = done;
-      }
-    },
-    [current]
-  );
+  const changeTo = useCallback((nextIndex) => {
+    setCurrent((prev) => (nextIndex === prev ? prev : nextIndex));
+  }, []);
 
   useEffect(() => {
     images.forEach((src) => {
@@ -40,18 +25,24 @@ const Hero = () => {
     });
   }, []);
 
+  // Auto-rotate (stable interval)
   useEffect(() => {
+    // clear any existing interval
+    if (timerRef.current) clearInterval(timerRef.current);
+
     timerRef.current = setInterval(() => {
-      const next = (current + 1) % images.length;
-      changeTo(next);
+      setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
 
-    return () => clearInterval(timerRef.current);
-  }, [current, changeTo]);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
 
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+      
+      <div className="relative w-full h-[240px] sm:h-[320px] md:h-[520px]">
         <AnimatePresence mode="sync">
           <motion.img
             key={current}
@@ -67,18 +58,20 @@ const Hero = () => {
             transition={{ duration: 0.9, ease: "easeInOut" }}
           />
         </AnimatePresence>
-      </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => changeTo(index)}
-            className={`h-3 w-3 rounded-full transition-all 
-              ${current === index ? "bg-white w-6" : "bg-white/60"}
-            `}
-          />
-        ))}
+        {/* Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => changeTo(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={`h-3 w-3 rounded-full transition-all 
+                ${current === index ? "bg-white w-6" : "bg-white/60"}
+              `}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

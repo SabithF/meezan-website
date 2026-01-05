@@ -276,7 +276,7 @@ const ChairmanMessagePage = () => {
                 <img
                 src="/assets/img/history/9.png"
                 alt="Meezan legacy image"
-                className="w-76 h-full object-cover transition-transform duration-700 hover:scale-105"
+                className="w-80 h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </section>
           )}
