@@ -26,7 +26,7 @@ const fadeChild = {
 };
 
 const TeaFactoriesPage = () => {
-    const [activeFactory, setActiveFactory] = useState("ancoombra"); 
+    const [activeFactory, setActiveFactory] = useState("ancoombra");
 
     return (
         <main className="w-full font-outfit">
@@ -198,7 +198,7 @@ const TeaFactoriesPage = () => {
                                         {/* Large main tile (left, 2 rows high) */}
                                         <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/ancoombra/2.JPG"
+                                                src="/assets/img/tea-fac/ancoombra/2.jpg"
                                                 alt="Ancoombra exterior"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
@@ -222,6 +222,8 @@ const TeaFactoriesPage = () => {
                                             />
                                         </div>
 
+                                        {/* Bottom images--- */}
+
                                         {/* Bottom left */}
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
@@ -239,6 +241,29 @@ const TeaFactoriesPage = () => {
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
                                         </div>
+                                        {Array.from({ length: 44 }).map((_, index) => {
+                                            const imgNumber = index + 6; 
+
+                                            return (
+                                                <div
+                                                    key={imgNumber}
+                                                    className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"
+                                                >
+                                                    <img
+                                                        src={`/assets/img/tea-fac/ancoombra/${imgNumber}.jpg`}
+                                                        alt={`Ancoombra gallery ${imgNumber}`}
+                                                        className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+                                                        loading="lazy"
+                                                        onError={(e) => {
+                                                            e.currentTarget.onerror = null;
+                                                            e.currentTarget.src = `/assets/img/tea-fac/ancoombra/${imgNumber}.JPG`;
+                                                        }}
+                                                    />
+                                                </div>
+                                            );
+                                        })}
+
+
                                     </div>
                                 </div>
                             </section>
@@ -363,14 +388,14 @@ const TeaFactoriesPage = () => {
                                         {/* Bottom right */}
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/hatale/17.jpg"
+                                                src="/assets/img/tea-fac/hatale/5.jpg"
                                                 alt="Estate surroundings"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
                                         </div>
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/hatale/4.jpg"
+                                                src="/assets/img/tea-fac/hatale/6.jpg"
                                                 alt="Factory interior"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
@@ -379,11 +404,33 @@ const TeaFactoriesPage = () => {
                                         {/* Bottom right */}
                                         <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                                             <img
-                                                src="/assets/img/tea-fac/hatale/17.jpg"
+                                                src="/assets/img/tea-fac/hatale/7.jpg"
                                                 alt="Estate surroundings"
                                                 className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                                             />
                                         </div>
+
+                                        {Array.from({ length: 13 }).map((_, index) => {
+                                            const imgNumber = index + 6; 
+
+                                            return (
+                                                <div
+                                                    key={imgNumber}
+                                                    className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"
+                                                >
+                                                    <img
+                                                        src={`/assets/img/tea-fac/hatale/${imgNumber}.jpg`}
+                                                        alt={`Hatale gallery ${imgNumber}`}
+                                                        className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+                                                        loading="lazy"
+                                                        onError={(e) => {
+                                                            e.currentTarget.onerror = null;
+                                                            e.currentTarget.src = `/assets/img/tea-fac/hatale/${imgNumber}.JPG`;
+                                                        }}
+                                                    />
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             </section>

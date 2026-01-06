@@ -222,7 +222,7 @@ const Portfolio = () => {
                 >
                     <LazyVideo
                         src="/assets/vdo/mz-teas-clip.mp4"
-                        poster="/assets/img/bung-02.jpg" //need to change
+                        poster="/assets/img/teaShop/4.jpg"
                         className="w-full h-full object-cover"
                         rootMargin="300px"
                     />
@@ -323,7 +323,7 @@ const Portfolio = () => {
 
                     <LazyVideo
                         src="/assets/vdo/new/Tea-vdo.mp4"
-                        poster="/assets/img/bung-02.jpg" //need to change
+                        poster="/assets/img/teas/tea-main.jpg"
                         className="w-full h-full object-cover"
                         rootMargin="300px"
                     />
@@ -355,7 +355,6 @@ const Portfolio = () => {
                         className="w-full h-full object-cover"
                         rootMargin="300px"
                     />
-                    
                     {/* <video
                         src="/assets/vdo/mz-hardware.mp4"
                         autoPlay

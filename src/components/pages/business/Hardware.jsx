@@ -40,7 +40,6 @@ const MeezanHardwarePage = () => {
 
                 </div>
 
-                {/* Spacer to preserve image height (same trick as Hero) */}
                 <img
                     src="/assets/img/banner/hardware-banner.jpg"
                     alt=""

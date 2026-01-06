@@ -15,6 +15,7 @@ import Plantations from "./components/pages/business/Plantations"
 import Hardware from "./components/pages/business/Hardware";
 import ContactPage from "./components/Contact";
 import CSR from "./components/pages/business/CSR";
+import { HashLink } from "react-router-hash-link";
 
 function App() {
   const location = useLocation();
@@ -24,11 +25,11 @@ function App() {
 
   return (
     <>
-      {/* NAV */}
+      
       {!hideLayout && <NavBar />}
 
       <Routes>
-        {/* Home */}
+        
         <Route
           path="/"
           element={
