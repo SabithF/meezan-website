@@ -29,7 +29,12 @@ const fadeChild = {
 
 const ContactPage = () => {
   const formRef = useRef();
-  const [alertBox, setAlert] = useState(null)
+  const [alert, setAlert] = useState(null);
+
+
+
+  const [sending, setSending] = useState(false);
+
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -40,51 +45,58 @@ const ContactPage = () => {
 
 
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    setSending(true);
+    setAlert({ type: "info", message: "Sending..." });
+
+    try {
+      const formData = new FormData(event.target);
+      formData.append("access_key", "c4ccddfa-9d4e-4572-953b-cc4ba678808e");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data?.success) {
+        throw new Error(data?.message || "Failed to send message.");
+      }
+
+      setAlert({ type: "success", message: "Message sent successfully!" });
+
+      setForm({
+        fullName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+
+      setTimeout(() => setAlert(null), 4000); // ✅ must be a function
+    } catch (err) {
+      console.error(err);
+      setAlert({
+        type: "error",
+        message: err?.message || "Something went wrong. Please try again.",
+      });
+    } finally {
+      setSending(false);
+    }
+  };
+
+
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((p) => ({ ...p, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    console.log("Contact form submitted:", form);
 
-    // email js
-    emailjs.send(
-      '',
-      '',
-      {
-        from_name: form.name,
-        to_name: 'Meezan Group of Compnies',
-        from_email: form.email,
-        to_email: 'meezans@sltnet.lk',
-        message: form.message,
-
-      },
-      ''
-    )
-      .then(()=> {
-        setLoading(false);
-        setAlert(true);
-        setForm({
-          fullName: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
-
-
-      }, (error) => {
-        setLoading(false);
-        console.log(error);
-        alert('Something went wrong.');
-    })
-
-
-    
-  };
 
   return (
     <main className="w-full font-outfit">
@@ -194,7 +206,22 @@ const ContactPage = () => {
                   Fill out the form and our team will get back to you.
                 </p>
 
-                <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                 {alert && (
+                    <div className="mt-6 rounded-2xl px-4 py-3 text-sm border bg-slate-50">
+                      <div className="flex items-start justify-between gap-4">
+                        <p>{alert.message}</p>
+                        <button
+                          type="button"
+                          onClick={() => setAlert(null)}
+                          className="text-xs font-semibold opacity-70 hover:opacity-100"
+                        >
+                          CLOSE
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                <form onSubmit={onSubmit} className="mt-8 space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Field
                       label="Full Name"
@@ -217,11 +244,13 @@ const ContactPage = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Field
-                      label="Phone (optional)"
+                      label="Phone"
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      placeholder="+94 ..."
+                      placeholder="07..."
+                      type="number"
+                      required
                     />
                     <Field
                       label="Subject"
@@ -250,13 +279,20 @@ const ContactPage = () => {
 
                   <button
                     type="submit"
+                    disabled={sending}
                     className="rounded-2xl bg-gradient-to-br from-[#3F4F2A] to-[#2E3B1F]
-                    px-6 py-3 text-sm font-semibold text-white
-                    shadow-[0_10px_30px_-10px_rgba(63,79,42,0.6)]
-                    transition hover:brightness-110"
+  px-6 py-3 text-sm font-semibold text-white
+  shadow-[0_10px_30px_-10px_rgba(63,79,42,0.6)]
+  transition hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {sending ? "Sending..." : "Send Message"}
                   </button>
+
+
+
+                 
+
+
                 </form>
               </GlassCard>
             </motion.section>
