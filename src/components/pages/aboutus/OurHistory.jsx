@@ -103,9 +103,9 @@ const OurHistory = () => {
 
   return (
     <main className="w-full min-h-screen bg-[#F7F5EA] py-20">
-      <section 
-      id="ourHistory"
-      className="max-w-6xl mx-auto px-6 md:px-10">
+      <section
+        id="ourHistory"
+        className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="mt-2 font-messiri text-3xl md:text-4xl text-[#151515]">
@@ -144,8 +144,8 @@ const OurHistory = () => {
             {historyData.map((item, index) => {
               const isEven = index % 2 === 0;
               const isLastTwo = index >= historyData.length - 2;
-              
-              
+
+
 
               return (
                 <motion.div
@@ -215,6 +215,52 @@ const OurHistory = () => {
           </div>
         </div>
       </section>
+      {/* ---------------- DOWNLOAD SECTION ---------------- */}
+      <div className="mt-20 text-center">
+        <h2 className="font-messiri text-2xl md:text-3xl text-[#151515] mb-6">
+          Download Our 100-Year Legacy
+        </h2>
+
+        <p className="text-[#4C4100] mb-8">
+          Read the complete Meezan Group history in your preferred language.
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="/assets/pdf/The Legacy of Meezan Hajiar English.pdf"
+            download="Meezan-Legacy-English.pdf"
+            className="px-6 py-3 rounded-full border border-[#C1B479]
+                 text-[#151515] font-semibold
+                 hover:bg-[#C1B479] hover:text-white
+                 transition"
+          >
+            English (PDF)
+          </a>
+
+          <a
+            href="/assets/pdf/The Legacy of Meezan Hajiar Sinhala.pdf"
+            download="Meezan-Legacy-Sinhala.pdf"
+            className="px-6 py-3 rounded-full border border-[#C1B479]
+                 text-[#151515] font-semibold
+                 hover:bg-[#C1B479] hover:text-white
+                 transition"
+          >
+            සිංහල (PDF)
+          </a>
+
+          <a
+            href="/assets/pdf/The Legacy of Meezan Hajiar Tamil.pdf"
+            download="Meezan-Legacy-Tamil.pdf"
+            className="px-6 py-3 rounded-full border border-[#C1B479]
+                 text-[#151515] font-semibold
+                 hover:bg-[#C1B479] hover:text-white
+                 transition"
+          >
+            தமிழ் (PDF)
+          </a>
+        </div>
+      </div>
+
     </main>
   );
 };

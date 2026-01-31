@@ -32,7 +32,7 @@ const Hero = () => {
 
     timerRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 5500);
+    }, 5000);
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
