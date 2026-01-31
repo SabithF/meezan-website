@@ -449,7 +449,7 @@ const Portfolio = () => {
                 >
                     <LazyVideo
                         src="/assets/vdo/mz-inst.mp4"
-                        poster="/assets/img/hardware.jpg"
+                        poster="/assets/img/inst.jpg"
                         className="w-full h-full object-cover"
                         rootMargin="300px"
                     />
@@ -478,7 +478,7 @@ const Portfolio = () => {
                 >
                      <LazyVideo
                         src="/assets/vdo/mit.mp4"
-                        poster="/assets/img/hardware.jpg" // need to change
+                        poster="/assets/img/mit-1.jpg"
                         className="w-full h-full object-cover"
                         rootMargin="300px"
                     />
@@ -510,9 +510,7 @@ const Portfolio = () => {
                     <p
 
                         className="font-outfit  text-center md:text-left">{heroContent[10].desc}</p>
-                    {/* <div className="">
-                        <img src="/assets/img/logoLine.png" alt="logos" className="object-cover  md:h-32 py-4" />
-                    </div> */}
+                    
                     <Link to="/csr">
                         <button
                             className="
