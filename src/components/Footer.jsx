@@ -140,7 +140,7 @@ const Footer = () => {
           <span>
             Website developed by{" "}
             <a
-              href="#"
+              href="https://www.haicreations.com/"
               className="text-white hover:underline underline-offset-4"
             >
               Hai Creations
