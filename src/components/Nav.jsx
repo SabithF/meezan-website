@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { motion, AnimatePresence } from "motion/react";
 
 const NavBar = () => {
@@ -17,16 +18,17 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to top on route change
+  // ✅ Scroll to top on route change (but DON'T fight hash navigation like /about#downloads)
   useEffect(() => {
+    if (location.hash) return;
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
-  // Close mobile menu on route change
+  // Close mobile menu on route/hash change
   useEffect(() => {
     setIsNavOpen(false);
     setOpenDropdown(null);
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   // Close when clicking outside
   useEffect(() => {
@@ -40,7 +42,6 @@ const NavBar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  
   const NavItems = [
     {
       lable: "About us",
@@ -48,6 +49,7 @@ const NavBar = () => {
       children: [
         { lable: "1925", to: "/about" },
         { lable: "Chairman", to: "/chairman-message" },
+        { lable: "Downloads", to: "/about#downloads" }, // ✅ hash link
       ],
     },
     {
@@ -55,20 +57,19 @@ const NavBar = () => {
       to: "/tea",
       children: [
         { lable: "Tea Factories", to: "/tea-factory" },
-        { lable: "Plantation", to: "/plantation" }, 
-        { lable: "Bungalow", to: "https://www.meezanbungalows.com/" }, 
+        { lable: "Plantation", to: "/plantation" },
+        { lable: "Bungalow", to: "https://www.meezanbungalows.com/" },
         { lable: "Hatale Classic Tea Shop", to: "/tea" },
         { lable: "Meezan Teas", to: "/teas" },
-        
-        { lable: "Hardware", to: "/hardware" }, 
-        { lable: "CSR Projects", to: "/csr" }, 
+        { lable: "Hardware", to: "/hardware" },
+        { lable: "CSR Projects", to: "/csr" },
       ],
     },
-    
     { lable: "Contact", to: "/contact" },
   ];
 
   const isExternal = (url) => /^https?:\/\//i.test(url);
+  const isHashLink = (url) => url.includes("#");
 
   // Mobile Slide Menu Animation
   const menuVariants = {
@@ -136,11 +137,11 @@ const NavBar = () => {
           </div>
         </Link>
 
+        {/* DESKTOP MENU */}
         <div className="gap-10 pr-4 text-md hidden md:flex font-outfit items-center">
           {NavItems.map((item, index) => {
             const hasChildren = Array.isArray(item.children);
 
-            // Normal top-level links
             if (!hasChildren) {
               return (
                 <NavLink
@@ -156,7 +157,6 @@ const NavBar = () => {
               );
             }
 
-            // Dropdown parents (IMPORTANT: not NavLink -> prevents double highlight)
             return (
               <div key={index} className="relative group">
                 <Link
@@ -173,11 +173,7 @@ const NavBar = () => {
                     strokeWidth="2.5"
                     className="opacity-70"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 9l6 6 6-6"
-                    />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
                   </svg>
                 </Link>
 
@@ -194,7 +190,6 @@ const NavBar = () => {
                 >
                   <div className="p-2">
                     {item.children.map((child) => {
-                      // External link opens new tab
                       if (isExternal(child.to)) {
                         return (
                           <a
@@ -209,7 +204,20 @@ const NavBar = () => {
                         );
                       }
 
-                      // Internal link highlights correctly
+                      // ✅ HashLink (Downloads)
+                      if (isHashLink(child.to)) {
+                        return (
+                          <HashLink
+                            key={child.to}
+                            smooth
+                            to={child.to}
+                            className="block rounded-xl px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition"
+                          >
+                            {child.lable}
+                          </HashLink>
+                        );
+                      }
+
                       return (
                         <NavLink
                           key={child.to}
@@ -252,7 +260,7 @@ const NavBar = () => {
         </button>
       </div>
 
-      {/* ✅ MOBILE MENU (CLICK DROPDOWNS) */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isNavOpen && (
           <motion.div
@@ -268,7 +276,6 @@ const NavBar = () => {
                 const hasChildren = Array.isArray(item.children);
                 const isOpen = openDropdown === item.lable;
 
-                // Normal link (no children)
                 if (!hasChildren) {
                   return (
                     <motion.div
@@ -290,7 +297,6 @@ const NavBar = () => {
                   );
                 }
 
-                // Dropdown (tap to open)
                 return (
                   <motion.div
                     key={item.lable}
@@ -319,11 +325,7 @@ const NavBar = () => {
                           stroke="white"
                           strokeWidth="2.5"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M6 9l6 6 6-6"
-                          />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
                         </svg>
                       </motion.span>
                     </button>
@@ -351,6 +353,20 @@ const NavBar = () => {
                                   >
                                     {child.lable}
                                   </a>
+                                );
+                              }
+
+                              // ✅ HashLink (Downloads) for mobile too
+                              if (isHashLink(child.to)) {
+                                return (
+                                  <HashLink
+                                    key={child.to}
+                                    smooth
+                                    to={child.to}
+                                    className="block rounded-lg px-3 py-2 text-[14px] text-white/90 hover:bg-white/10 transition"
+                                  >
+                                    {child.lable}
+                                  </HashLink>
                                 );
                               }
 

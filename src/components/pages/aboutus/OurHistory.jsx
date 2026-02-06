@@ -216,7 +216,7 @@ const OurHistory = () => {
         </div>
       </section>
       {/* ---------------- DOWNLOAD SECTION ---------------- */}
-      <div className="mt-20 text-center">
+      <div id="downloads" className="mt-20 text-center">
         <h2 className="font-messiri text-2xl md:text-3xl text-[#151515] mb-6">
           Download Our 100-Year Legacy
         </h2>

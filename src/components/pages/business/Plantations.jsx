@@ -134,7 +134,7 @@ const Plantations = () => {
                                     className="overflow-hidden rounded-3xl shadow-lg"
                                 >
                                     <img
-                                        src="/assets/img/plantation/ancom/4.jpg"
+                                        src="/assets/img/plantation/ancom/2.jpg"
                                         alt="Ancoombra Tea Factory"
                                         className="w-full h-[260px] md:h-[420px] object-cover transition-transform duration-700 hover:scale-105"
                                     />
@@ -180,10 +180,36 @@ const Plantations = () => {
                                 </motion.div>
                             </section>
 
-                            
-                            {/* ===== Gallery (Ancoombra) ===== */} 
-                            
-                            <section className="max-w-5xl mx-auto py-16 px-2 md:px-0"> <h2 className="text-3xl font-messiri text-center mb-10"> Ancoombra Factory Gallery </h2> <div className="bg-slate-50 rounded-3xl p-4 md:p-6 shadow-sm"> <div className="grid grid-cols-12 gap-4 md:auto-rows-[190px] lg:auto-rows-[220px]" > {/* Large main tile (left, 2 rows high) */} <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/1.jpeg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right top */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/2.jpg" alt="Withering section" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right middle */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/5.jpeg" alt="Leaf handling" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Bottom left */} <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/6.jpg" alt="Factory interior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Bottom right */} <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/4.jpg" alt="Estate surroundings" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> </div> </div> </section>
+
+                            {/* ===== Gallery (Ancoombra) ===== */}
+
+                            <section className="max-w-5xl mx-auto py-16 px-2 md:px-0">
+                                <h2 className="text-3xl font-messiri text-center mb-10"> Ancoombra Factory Gallery </h2>
+                                <div className="bg-slate-50 rounded-3xl p-4 md:p-6 shadow-sm">
+                                    <div className="grid grid-cols-12 gap-4 md:auto-rows-[190px] lg:auto-rows-[220px]" >
+                                        {/* Large main tile (left, 2 rows high) */}
+                                        <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/1.jpeg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right top */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/2.jpg" alt="Withering section" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right middle */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/ancom/5.jpeg" alt="Leaf handling" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div>
+
+
+                                        {/* Bottom left */}
+
+                                        {/* <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
+
+                                            <img src="/assets/img/plantation/ancom/6.jpg" alt="Factory interior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" />
+                                        </div> */}
+
+                                        {/* Bottom right  */}
+
+                                        {/* <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> 
+                                            <img src="/assets/img/plantation/ancom/4.jpg" alt="Estate surroundings" 
+                                            className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all 
+                                            duration-500" /> 
+                                            
+                                            </div> 
+                                             */}
+
+
+                                    </div> </div> </section>
                         </>
                     )}
 
@@ -250,7 +276,8 @@ const Plantations = () => {
                             </section>
 
                             {/* ===== Gallery ===== */}
-                            <section className="max-w-5xl mx-auto py-16 px-2 md:px-0"> <h2 className="text-3xl font-messiri text-center mb-10"> Hatale Plantation Gallery </h2> <div className="bg-slate-50 rounded-3xl p-4 md:p-6 shadow-sm"> <div className="grid grid-cols-12 gap-4 md:auto-rows-[190px] lg:auto-rows-[220px]" > {/* Large main tile (left, 2 rows high) */} <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/1.jpg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right top */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/1.jpg" alt="Withering section" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right middle */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/2.jpeg" alt="Leaf handling" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Bottom left */} <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/3.jpg" alt="Factory interior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Bottom right */} <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/4.jpg" alt="Estate surroundings" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> </div> </div> </section>
+                            <section className="max-w-5xl mx-auto py-16 px-2 md:px-0">
+                                <h2 className="text-3xl font-messiri text-center mb-10"> Hatale Plantation Gallery </h2> <div className="bg-slate-50 rounded-3xl p-4 md:p-6 shadow-sm"> <div className="grid grid-cols-12 gap-4 md:auto-rows-[190px] lg:auto-rows-[220px]" > {/* Large main tile (left, 2 rows high) */} <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/1.jpg" alt="Ancoombra exterior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right top */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/1.jpg" alt="Withering section" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Right middle */} <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/2.jpeg" alt="Leaf handling" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Bottom left */} <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/3.jpg" alt="Factory interior" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> {/* Bottom right */} <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md"> <img src="/assets/img/plantation/hatale/4.jpg" alt="Estate surroundings" className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500" /> </div> </div> </div> </section>
                         </>
                     )}
                 </div>
