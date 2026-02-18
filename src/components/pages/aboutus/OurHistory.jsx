@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "motion/react";
 
 const historyData = [
@@ -95,17 +95,38 @@ const historyData = [
   },
 ];
 
-
-
-
 const OurHistory = () => {
+  
+  const YOUTUBE_URL = "https://www.youtube.com/watch?v=ZffnmXaqYXQ?si=4Ckmd_ZfbRFNQBXj";
 
+ 
+  const embedUrl = useMemo(() => {
+    try {
+      const url = new URL(YOUTUBE_URL);
+
+      
+      if (url.hostname.includes("youtu.be")) {
+        const id = url.pathname.replace("/", "");
+        return `https://www.youtube.com/embed/${id}`;
+      }
+
+      // youtube.com/watch?v=<id>
+      const v = url.searchParams.get("v");
+      if (v) return `https://www.youtube.com/embed/${v}`;
+
+      // youtube.com/embed/<id>
+      if (url.pathname.includes("/embed/")) return YOUTUBE_URL;
+
+      // fallback
+      return YOUTUBE_URL;
+    } catch {
+      return YOUTUBE_URL;
+    }
+  }, [YOUTUBE_URL]);
 
   return (
     <main className="w-full min-h-screen bg-[#F7F5EA] py-20">
-      <section
-        id="ourHistory"
-        className="max-w-6xl mx-auto px-6 md:px-10">
+      <section id="ourHistory" className="max-w-6xl mx-auto px-6 md:px-10">
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="mt-2 font-messiri text-3xl md:text-4xl text-[#151515]">
@@ -117,7 +138,6 @@ const OurHistory = () => {
             1925-2025
           </h1>
         </div>
-
 
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -135,7 +155,6 @@ const OurHistory = () => {
           </div>
         </motion.div>
 
-
         <div className="relative">
           {/* Vertical line (desktop only) */}
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-[#D2C9A7]" />
@@ -145,49 +164,47 @@ const OurHistory = () => {
               const isEven = index % 2 === 0;
               const isLastTwo = index >= historyData.length - 2;
 
-
-
               return (
                 <motion.div
-                  key={item.year}
+                  key={`${item.year}-${index}`}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.7, delay: index * 0.1 }}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${!isEven ? "md:flex-row-reverse" : ""
-                    }`}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${
+                    !isEven ? "md:flex-row-reverse" : ""
+                  }`}
                 >
-
                   {/* Image */}
                   <div
-                    className={`w-full md:w-1/2 flex justify-center ${isEven ? "md:justify-end" : "md:justify-start"
-                      }`}
+                    className={`w-full md:w-1/2 flex justify-center ${
+                      isEven ? "md:justify-end" : "md:justify-start"
+                    }`}
                   >
                     <div className="relative w-full max-w-sm">
-                      <div className="w-full h-64 md:h-72 overflow-hidden rounded-3xl ">
+                      <div className="w-full h-64 md:h-72 overflow-hidden rounded-3xl">
                         <img
                           src={item.image}
                           alt={item.title}
                           loading="lazy"
                           className={`
-    transition-all duration-300
-    ${isLastTwo
-                              ? "object-contain p-6 md:p-1 scale-100"
-                              : "object-cover"}
-    w-full h-full
-    ${isLastTwo ? "" : "shadow-md"}
-  `}
+                            transition-all duration-300
+                            ${
+                              isLastTwo
+                                ? "object-contain p-6 md:p-1 scale-100"
+                                : "object-cover"
+                            }
+                            w-full h-full
+                            ${isLastTwo ? "" : "shadow-md"}
+                          `}
                         />
-
                       </div>
 
                       {!isLastTwo && (
-                        <div className="absolute -top-4 -left-4 h-20 w-20 rounded-2xl -z-10 " />
+                        <div className="absolute -top-4 -left-4 h-20 w-20 rounded-2xl -z-10" />
                       )}
                     </div>
                   </div>
-
-
 
                   {/* Dot in the middle (desktop) */}
                   <div className="hidden md:flex flex-col items-center justify-center w-10">
@@ -196,7 +213,6 @@ const OurHistory = () => {
 
                   {/* Text */}
                   <div className="w-full md:w-1/2">
-                    {/* ✅  */}
                     <p className="font-semibold tracking-[0.2em] uppercase text-[#7E7440] text-base md:text-lg">
                       {item.year}
                     </p>
@@ -214,53 +230,87 @@ const OurHistory = () => {
             })}
           </div>
         </div>
-      </section>
-      {/* ---------------- DOWNLOAD SECTION ---------------- */}
-      <div id="downloads" className="mt-20 text-center">
-        <h2 className="font-messiri text-2xl md:text-3xl text-[#151515] mb-6">
-          Download Our 100-Year Legacy
-        </h2>
 
-        <p className="text-[#4C4100] mb-8">
-          Read the complete Meezan Group history in your preferred language.
-        </p>
+        {/* ---------------- DOWNLOAD SECTION ---------------- */}
+        <div id="downloads" className="mt-20 text-center">
+          <h2 className="font-messiri text-2xl md:text-3xl text-[#151515] mb-6">
+            Download Our 100-Year Legacy
+          </h2>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href="/assets/pdf/The Legacy of Meezan Hajiar English.pdf"
-            download="Meezan-Legacy-English.pdf"
-            className="px-6 py-3 rounded-full border border-[#C1B479]
+          <p className="text-[#4C4100] mb-8">
+            Read the complete Meezan Group history in your preferred language.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="/assets/pdf/The Legacy of Meezan Hajiar English.pdf"
+              download="Meezan-Legacy-English.pdf"
+              className="px-6 py-3 rounded-full border border-[#C1B479]
                  text-[#151515] font-semibold
                  hover:bg-[#C1B479] hover:text-white
                  transition"
-          >
-            English (PDF)
-          </a>
+            >
+              English (PDF)
+            </a>
 
-          <a
-            href="/assets/pdf/The Legacy of Meezan Hajiar Sinhala.pdf"
-            download="Meezan-Legacy-Sinhala.pdf"
-            className="px-6 py-3 rounded-full border border-[#C1B479]
+            <a
+              href="/assets/pdf/The Legacy of Meezan Hajiar Sinhala.pdf"
+              download="Meezan-Legacy-Sinhala.pdf"
+              className="px-6 py-3 rounded-full border border-[#C1B479]
                  text-[#151515] font-semibold
                  hover:bg-[#C1B479] hover:text-white
                  transition"
-          >
-            සිංහල (PDF)
-          </a>
+            >
+              සිංහල (PDF)
+            </a>
 
-          <a
-            href="/assets/pdf/The Legacy of Meezan Hajiar Tamil.pdf"
-            download="Meezan-Legacy-Tamil.pdf"
-            className="px-6 py-3 rounded-full border border-[#C1B479]
+            <a
+              href="/assets/pdf/The Legacy of Meezan Hajiar Tamil.pdf"
+              download="Meezan-Legacy-Tamil.pdf"
+              className="px-6 py-3 rounded-full border border-[#C1B479]
                  text-[#151515] font-semibold
                  hover:bg-[#C1B479] hover:text-white
                  transition"
-          >
-            தமிழ் (PDF)
-          </a>
+            >
+              தமிழ் (PDF)
+            </a>
+          </div>
         </div>
-      </div>
 
+        {/* ---------------- VIDEO SECTION ---------------- */}
+        <motion.section
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mt-16"
+        >
+          <div className="text-center mb-8">
+            <h2 className="font-messiri text-2xl md:text-3xl text-[#151515]">
+              Watch Our Legacy Story
+            </h2>
+            <p className="text-[#4C4100] mt-2">
+              A short video capturing the journey of Meezan Group through 100 years.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-white/60 border border-[#D2C9A7] rounded-3xl shadow-md p-4 md:p-6">
+            {/* Responsive 16:9 wrapper */}
+            <div className="relative w-full overflow-hidden rounded-2xl" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                src={`${embedUrl}?rel=0&modestbranding=1&autoplay=0`}
+                title="Meezan Legacy Video"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+
+            
+           
+          </div>
+        </motion.section>
+      </section>
     </main>
   );
 };
