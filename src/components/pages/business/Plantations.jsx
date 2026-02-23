@@ -363,7 +363,7 @@ const Plantations = () => {
                     {/* Large main tile */}
                     <div className="col-span-12 md:col-span-7 md:row-span-2 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                       <img
-                        src="/assets/img/plantation/hatale/1.jpg"
+                        src="/assets/img/plantation/hatale/2.jpeg"
                         alt="Hatale main"
                         className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                       />
@@ -372,7 +372,7 @@ const Plantations = () => {
                     {/* Right top */}
                     <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                       <img
-                        src="/assets/img/plantation/hatale/1.jpg"
+                        src="/assets/img/plantation/hatale/3.jpg"
                         alt="Hatale view 2"
                         className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                       />
@@ -381,29 +381,29 @@ const Plantations = () => {
                     {/* Right middle */}
                     <div className="col-span-12 md:col-span-5 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                       <img
-                        src="/assets/img/plantation/hatale/2.jpeg"
+                        src="/assets/img/plantation/hatale/4.jpg"
                         alt="Hatale view 3"
                         className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                       />
                     </div>
 
                     {/* Bottom left */}
-                    <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
+                    {/* <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                       <img
                         src="/assets/img/plantation/hatale/3.jpg"
                         alt="Hatale view 4"
                         className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                       />
-                    </div>
+                    </div> */}
 
                     {/* Bottom right */}
-                    <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
+                    {/* <div className="col-span-12 md:col-span-6 overflow-hidden rounded-2xl md:rounded-3xl shadow-md">
                       <img
                         src="/assets/img/plantation/hatale/4.jpg"
                         alt="Hatale view 5"
                         className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </section>
@@ -445,6 +445,30 @@ const Plantations = () => {
                   >
                     Nagala Plantation
                   </motion.h2>
+
+                  <motion.p
+                    variants={fadeChild}
+                    className="text-slate-600 leading-relaxed"
+                  >
+                    Nagala Plantation, acquired in 1986 as part of a compensation package for lands previously taken over, is located approximately 25 miles from the historic city of Matale, along the Matale Rattota road, adjoining the Gammaduwa area.
+Since its inception, Nagala Plantation has been primarily dedicated to tea cultivation. However, in recent years, we have been compelled to make strategic changes by gradually reducing tea cultivation and introducing timber and pepper on a large scale. This shift has been driven by significant changes in climatic conditions in the region.
+                  </motion.p>
+
+                  <motion.p
+                    variants={fadeChild}
+                    className="text-slate-600 leading-relaxed"
+                  >
+                    Over the past decade and beyond, the climate in Nagala has become increasingly dry. As a result, the topsoil has lost much of the essential nutrients required to sustain healthy and productive tea bushes. Given these conditions, continuing large-scale tea cultivation is no longer economically or environmentally viable.
+At the same time, widespread deforestation in the surrounding region has further aggravated the situation. We strongly believe that large-scale timber cultivation will contribute positively by improving rainfall patterns and enhancing soil quality through natural enrichment over time.
+                  </motion.p>
+
+                  <motion.p
+                    variants={fadeChild}
+                    className="text-slate-600 leading-relaxed"
+                  >
+                    Accordingly, substantial portions of the plantation have already been cleared and replanted with timber and pepper. Our long-term objective is to progressively convert the entire plantation from tea to timber, with pepper cultivation in selected areas. This diversification strategy is expected to deliver sustainable long-term benefits, particularly in view of the scarcity and steadily increasing demand for timber and pepper in Sri Lanka.
+                  </motion.p>
+
 
                   
                 </motion.div>

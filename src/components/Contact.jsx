@@ -128,7 +128,7 @@ const ContactPage = () => {
 
       {/* ===================== CONTENT WITH IMAGE BACKGROUND ===================== */}
       <section
-        className="relative py-20 px-4 md:px-6 lg:px-10 overflow-hidden opacity-95 "
+        className="relative py-20 px-4 md:px-6 lg:px-10 overflow-hidden opacity-70 "
         style={{
           backgroundImage: "url('/assets/img/tea-leaves.jpg')",
           backgroundSize: "contain",
@@ -137,7 +137,7 @@ const ContactPage = () => {
         }}
       >
         {/* Soft overlay for readability */}
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] -z-10" />
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px] -z-10" />
 
         <div className="max-w-6xl mx-auto">
           <motion.div
